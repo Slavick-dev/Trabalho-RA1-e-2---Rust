@@ -227,35 +227,38 @@ impl Grupo {
     }
 }
 
-// Lê texto não vazio; encerra com segurança se a entrada terminar ou falhar.
+// Lê uma linha, permitindo que cada função valide seu próprio contexto.
+fn ler_entrada(mensagem: &str) -> String {
+    println!("{}", mensagem);
+    let mut entrada = String::new();
+    match io::stdin().read_line(&mut entrada) {
+        Ok(0) => {
+            println!("Entrada encerrada.");
+            std::process::exit(0);
+        }
+        Ok(_) => entrada.trim().to_string(),
+        Err(_) => {
+            println!("Não foi possível ler a entrada.");
+            std::process::exit(1);
+        }
+    }
+}
+
+// Lê nomes não vazios, retirando espaços das extremidades.
 fn ler_texto(mensagem: &str) -> String {
     loop {
-        println!("{}", mensagem);
-        let mut entrada = String::new();
-        match io::stdin().read_line(&mut entrada) {
-            Ok(0) => {
-                println!("Entrada encerrada.");
-                std::process::exit(0);
-            }
-            Ok(_) => {
-                let texto = entrada.trim();
-                if !texto.is_empty() {
-                    return texto.to_string();
-                }
-                println!("Digite um valor não vazio.");
-            }
-            Err(_) => {
-                println!("Não foi possível ler a entrada.");
-                std::process::exit(1);
-            }
+        let texto = ler_entrada(mensagem);
+        if !texto.is_empty() {
+            return texto;
         }
+        println!("Nome inválido. Digite um nome não vazio.");
     }
 }
 
 // Lê números de 0 a 65535, repetindo a pergunta quando há erro.
 fn ler_u16(mensagem: &str) -> u16 {
     loop {
-        match ler_texto(mensagem).parse::<u16>() {
+        match ler_entrada(mensagem).parse::<u16>() {
             Ok(numero) => return numero,
             Err(_) => println!("Número inválido. Digite de 0 a 65535."),
         }
@@ -265,9 +268,19 @@ fn ler_u16(mensagem: &str) -> u16 {
 // Lê um tamanho sem sinal, respeitando o limite do tipo u64.
 fn ler_u64(mensagem: &str) -> u64 {
     loop {
-        match ler_texto(mensagem).parse::<u64>() {
+        match ler_entrada(mensagem).parse::<u64>() {
             Ok(numero) => return numero,
-            Err(_) => println!("Número inválido para u64. Digite um inteiro sem sinal."),
+            Err(_) => println!("Tamanho inválido. Digite um inteiro de 0 a 18446744073709551615."),
+        }
+    }
+}
+
+// Lê apenas opções existentes no menu que está sendo exibido.
+fn ler_opcao(maximo: u16) -> u16 {
+    loop {
+        match ler_entrada("Opção:").parse::<u16>() {
+            Ok(opcao) if opcao <= maximo => return opcao,
+            _ => println!("Opção inválida. Digite um número de 0 a {}.", maximo),
         }
     }
 }
@@ -275,13 +288,13 @@ fn ler_u64(mensagem: &str) -> u64 {
 // Seleciona uma posição exibida no menu e verifica os limites antes do acesso.
 fn ler_indice(quantidade: usize) -> Option<usize> {
     if quantidade == 0 {
-        println!("Nenhum item cadastrado.");
         return None;
     }
-    match ler_texto("Número do item (a partir de 1):").parse::<usize>() {
+    println!("Escolha um item de 1 a {}.", quantidade);
+    match ler_entrada("Número do item:").parse::<usize>() {
         Ok(numero) if numero >= 1 && numero <= quantidade => Some(numero - 1),
         _ => {
-            println!("Item não encontrado ou número inválido.");
+            println!("Item inválido. Escolha um número de 1 a {}.", quantidade);
             None
         }
     }
@@ -290,11 +303,13 @@ fn ler_indice(quantidade: usize) -> Option<usize> {
 // Lê uma permissão como dígito octal e converte para três booleanos.
 fn ler_permissao() -> Permissao {
     loop {
-        let valor = ler_u16("Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):");
-        if valor <= 7 {
-            return Permissao::new(valor & 4 != 0, valor & 2 != 0, valor & 1 != 0);
+        let entrada = ler_entrada("Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):");
+        match entrada.parse::<u8>() {
+            Ok(valor) if valor <= 7 => {
+                return Permissao::new(valor & 4 != 0, valor & 2 != 0, valor & 1 != 0);
+            }
+            _ => println!("Permissão inválida. Digite um número de 0 a 7."),
         }
-        println!("Permissão inválida. Use de 0 a 7.");
     }
 }
 
@@ -331,26 +346,77 @@ fn mostrar_permissoes(permissoes: &(Permissao, Permissao, Permissao)) {
     );
 }
 
-// Cria um arquivo com os dados digitados e as permissões padrão do construtor.
-fn criar_arquivo() -> Arquivo {
+// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+fn nome_arquivo_repetido(arquivos: &[Arquivo], nome: &str, ignorar: Option<usize>) -> bool {
+    for (indice, arquivo) in arquivos.iter().enumerate() {
+        if Some(indice) != ignorar && arquivo.nome == nome {
+            return true;
+        }
+    }
+    false
+}
+
+// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+fn nome_diretorio_repetido(diretorios: &[Diretorio], nome: &str, ignorar: Option<usize>) -> bool {
+    for (indice, diretorio) in diretorios.iter().enumerate() {
+        if Some(indice) != ignorar && diretorio.nome == nome {
+            return true;
+        }
+    }
+    false
+}
+
+// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+fn nome_usuario_repetido(usuarios: &[Usuario], nome: &str, ignorar: Option<usize>) -> bool {
+    for (indice, usuario) in usuarios.iter().enumerate() {
+        if Some(indice) != ignorar && usuario.nome == nome {
+            return true;
+        }
+    }
+    false
+}
+
+// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+fn nome_grupo_repetido(grupos: &[Grupo], nome: &str, ignorar: Option<usize>) -> bool {
+    for (indice, grupo) in grupos.iter().enumerate() {
+        if Some(indice) != ignorar && grupo.nome == nome {
+            return true;
+        }
+    }
+    false
+}
+
+// Recusa nomes repetidos e cria um arquivo com as permissões padrão do construtor.
+fn criar_arquivo(arquivos: &[Arquivo]) -> Option<Arquivo> {
     let nome = ler_texto("Nome do arquivo:");
+    if nome_arquivo_repetido(arquivos, &nome, None) {
+        println!("Já existe um arquivo com esse nome nesta lista.");
+        return None;
+    }
     let tamanho = ler_u64("Tamanho em bytes:");
     let uid = ler_u16("Uid do dono:");
     let gid = ler_u16("Gid do grupo:");
-    Arquivo::new(nome, tamanho, uid, gid)
+    Some(Arquivo::new(nome, tamanho, uid, gid))
 }
 
-// Permite editar cada campo de um arquivo emprestado de forma mutável.
-fn editar_arquivo(arquivo: &mut Arquivo) {
+// Edita um arquivo já selecionado, mantendo nomes distintos na mesma lista.
+fn editar_arquivo(arquivos: &mut [Arquivo], indice: usize) {
     loop {
-        println!("\nEditar arquivo: {}", arquivo.nome);
+        println!("\nEditar arquivo: {}", arquivos[indice].nome);
         println!("1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar");
-        match ler_u16("Opção:") {
-            1 => arquivo.nome = ler_texto("Novo nome:"),
-            2 => arquivo.tamanho = ler_u64("Novo tamanho:"),
-            3 => arquivo.alterar_permissao(ler_permissoes()),
-            4 => arquivo.uid_dono = ler_u16("Novo uid:"),
-            5 => arquivo.gid_grupo = ler_u16("Novo gid:"),
+        match ler_opcao(5) {
+            1 => {
+                let nome = ler_texto("Novo nome:");
+                if nome_arquivo_repetido(arquivos, &nome, Some(indice)) {
+                    println!("Já existe um arquivo com esse nome nesta lista.");
+                } else {
+                    arquivos[indice].nome = nome;
+                }
+            }
+            2 => arquivos[indice].tamanho = ler_u64("Novo tamanho:"),
+            3 => arquivos[indice].alterar_permissao(ler_permissoes()),
+            4 => arquivos[indice].uid_dono = ler_u16("Novo uid:"),
+            5 => arquivos[indice].gid_grupo = ler_u16("Novo gid:"),
             0 => break,
             _ => println!("Opção inválida."),
         }
@@ -372,12 +438,16 @@ fn listar_arquivos(arquivos: &[Arquivo]) {
 fn menu_arquivos(arquivos: &mut Vec<Arquivo>) {
     loop {
         println!("\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
-        match ler_u16("Opção:") {
-            1 => arquivos.push(criar_arquivo()),
+        match ler_opcao(4) {
+            1 => {
+                if let Some(arquivo) = criar_arquivo(arquivos) {
+                    arquivos.push(arquivo);
+                }
+            }
             2 => {
                 listar_arquivos(arquivos);
                 if let Some(indice) = ler_indice(arquivos.len()) {
-                    editar_arquivo(&mut arquivos[indice]);
+                    editar_arquivo(arquivos, indice);
                 }
             }
             3 => {
@@ -407,47 +477,56 @@ fn listar_diretorios(diretorios: &[Diretorio]) {
     }
 }
 
-// Edita o diretório e gerencia os arquivos que ele possui.
-fn editar_diretorio(diretorio: &mut Diretorio, arquivos: &mut Vec<Arquivo>) {
+// Edita o diretório selecionado e gerencia os arquivos que ele possui.
+fn editar_diretorio(diretorios: &mut [Diretorio], indice: usize, arquivos: &mut Vec<Arquivo>) {
     loop {
-        println!("\nEditar diretório: {}", diretorio.nome);
+        println!("\nEditar diretório: {}", diretorios[indice].nome);
         println!("1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá");
         println!(
             "5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar"
         );
-        match ler_u16("Opção:") {
-            1 => diretorio.nome = ler_texto("Novo nome:"),
-            2 => diretorio.permissoes = ler_permissoes(),
-            3 => diretorio.uid_dono = ler_u16("Novo uid:"),
+        match ler_opcao(7) {
+            1 => {
+                let nome = ler_texto("Novo nome:");
+                if nome_diretorio_repetido(diretorios, &nome, Some(indice)) {
+                    println!("Já existe um diretório com esse nome nesta lista.");
+                } else {
+                    diretorios[indice].nome = nome;
+                }
+            }
+            2 => diretorios[indice].permissoes = ler_permissoes(),
+            3 => diretorios[indice].uid_dono = ler_u16("Novo uid:"),
             4 => {
                 listar_arquivos(arquivos);
-                if let Some(indice) = ler_indice(arquivos.len()) {
-                    let mut repetido = false;
-                    for existente in &diretorio.arquivos {
-                        if existente.nome == arquivos[indice].nome {
-                            repetido = true;
-                        }
-                    }
-                    if repetido {
+                if let Some(indice_arquivo) = ler_indice(arquivos.len()) {
+                    if nome_arquivo_repetido(
+                        &diretorios[indice].arquivos,
+                        &arquivos[indice_arquivo].nome,
+                        None,
+                    ) {
                         println!("Já existe um arquivo com esse nome no diretório.");
                     } else {
-                        let arquivo = arquivos.remove(indice);
-                        diretorio.adiciona_arquivo(arquivo);
+                        let arquivo = arquivos.remove(indice_arquivo);
+                        diretorios[indice].adiciona_arquivo(arquivo);
                         println!("Arquivo movido para o diretório.");
                     }
                 }
             }
             5 => {
-                let nome = ler_texto("Nome do arquivo a apagar:");
-                diretorio.remove_arquivo(&nome);
-            }
-            6 => {
-                listar_arquivos(&diretorio.arquivos);
-                if let Some(indice) = ler_indice(diretorio.arquivos.len()) {
-                    editar_arquivo(&mut diretorio.arquivos[indice]);
+                if diretorios[indice].arquivos.is_empty() {
+                    println!("Diretório vazio.");
+                } else {
+                    let nome = ler_texto("Nome do arquivo a apagar:");
+                    diretorios[indice].remove_arquivo(&nome);
                 }
             }
-            7 => diretorio.listar_conteudo(),
+            6 => {
+                listar_arquivos(&diretorios[indice].arquivos);
+                if let Some(indice_arquivo) = ler_indice(diretorios[indice].arquivos.len()) {
+                    editar_arquivo(&mut diretorios[indice].arquivos, indice_arquivo);
+                }
+            }
+            7 => diretorios[indice].listar_conteudo(),
             0 => break,
             _ => println!("Opção inválida."),
         }
@@ -457,18 +536,22 @@ fn editar_diretorio(diretorio: &mut Diretorio, arquivos: &mut Vec<Arquivo>) {
 // Cria, edita, apaga e lista diretórios usando o vetor mantido no main.
 fn menu_diretorios(diretorios: &mut Vec<Diretorio>, arquivos: &mut Vec<Arquivo>) {
     loop {
-        println!("\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
-        match ler_u16("Opção:") {
+        println!("\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar");
+        match ler_opcao(4) {
             1 => {
                 let nome = ler_texto("Nome do diretório:");
-                let permissoes = ler_permissoes();
-                let uid = ler_u16("Uid do dono:");
-                diretorios.push(Diretorio::new(nome, permissoes, uid));
+                if nome_diretorio_repetido(diretorios, &nome, None) {
+                    println!("Já existe um diretório com esse nome nesta lista.");
+                } else {
+                    let permissoes = ler_permissoes();
+                    let uid = ler_u16("Uid do dono:");
+                    diretorios.push(Diretorio::new(nome, permissoes, uid));
+                }
             }
             2 => {
                 listar_diretorios(diretorios);
                 if let Some(indice) = ler_indice(diretorios.len()) {
-                    editar_diretorio(&mut diretorios[indice], arquivos);
+                    editar_diretorio(diretorios, indice, arquivos);
                 }
             }
             3 => {
@@ -501,17 +584,24 @@ fn listar_usuarios(usuarios: &[Usuario]) {
     }
 }
 
-// Edita os campos de um usuário e adiciona ou remove IDs de grupos.
-fn editar_usuario(usuario: &mut Usuario) {
+// Edita o usuário selecionado e adiciona ou remove IDs de grupos.
+fn editar_usuario(usuarios: &mut [Usuario], indice: usize) {
     loop {
-        println!("\nEditar usuário: {}", usuario.nome);
+        println!("\nEditar usuário: {}", usuarios[indice].nome);
         println!("1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar");
-        match ler_u16("Opção:") {
-            1 => usuario.nome = ler_texto("Novo nome:"),
-            2 => usuario.uid = ler_u16("Novo uid:"),
-            3 => usuario.adiciona_grupo(ler_u16("Gid a adicionar:")),
-            4 => usuario.remove_grupo(ler_u16("Gid a remover:")),
-            5 => usuario.listar_grupos(),
+        match ler_opcao(5) {
+            1 => {
+                let nome = ler_texto("Novo nome:");
+                if nome_usuario_repetido(usuarios, &nome, Some(indice)) {
+                    println!("Já existe um usuário com esse nome nesta lista.");
+                } else {
+                    usuarios[indice].nome = nome;
+                }
+            }
+            2 => usuarios[indice].uid = ler_u16("Novo uid:"),
+            3 => usuarios[indice].adiciona_grupo(ler_u16("Gid a adicionar:")),
+            4 => usuarios[indice].remove_grupo(ler_u16("Gid a remover:")),
+            5 => usuarios[indice].listar_grupos(),
             0 => break,
             _ => println!("Opção inválida."),
         }
@@ -522,16 +612,20 @@ fn editar_usuario(usuario: &mut Usuario) {
 fn menu_usuarios(usuarios: &mut Vec<Usuario>) {
     loop {
         println!("\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
-        match ler_u16("Opção:") {
+        match ler_opcao(4) {
             1 => {
                 let nome = ler_texto("Nome do usuário:");
-                let uid = ler_u16("Uid:");
-                usuarios.push(Usuario::new(nome, uid));
+                if nome_usuario_repetido(usuarios, &nome, None) {
+                    println!("Já existe um usuário com esse nome nesta lista.");
+                } else {
+                    let uid = ler_u16("Uid:");
+                    usuarios.push(Usuario::new(nome, uid));
+                }
             }
             2 => {
                 listar_usuarios(usuarios);
                 if let Some(indice) = ler_indice(usuarios.len()) {
-                    editar_usuario(&mut usuarios[indice]);
+                    editar_usuario(usuarios, indice);
                 }
             }
             3 => {
@@ -564,17 +658,24 @@ fn listar_grupos(grupos: &[Grupo]) {
     }
 }
 
-// Edita os campos de um grupo e adiciona ou remove IDs de membros.
-fn editar_grupo(grupo: &mut Grupo) {
+// Edita o grupo selecionado e adiciona ou remove IDs de membros.
+fn editar_grupo(grupos: &mut [Grupo], indice: usize) {
     loop {
-        println!("\nEditar grupo: {}", grupo.nome);
+        println!("\nEditar grupo: {}", grupos[indice].nome);
         println!("1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar");
-        match ler_u16("Opção:") {
-            1 => grupo.nome = ler_texto("Novo nome:"),
-            2 => grupo.gid = ler_u16("Novo gid:"),
-            3 => grupo.adiciona_membro(ler_u16("Uid a adicionar:")),
-            4 => grupo.remove_membro(ler_u16("Uid a remover:")),
-            5 => grupo.listar_membros(),
+        match ler_opcao(5) {
+            1 => {
+                let nome = ler_texto("Novo nome:");
+                if nome_grupo_repetido(grupos, &nome, Some(indice)) {
+                    println!("Já existe um grupo com esse nome nesta lista.");
+                } else {
+                    grupos[indice].nome = nome;
+                }
+            }
+            2 => grupos[indice].gid = ler_u16("Novo gid:"),
+            3 => grupos[indice].adiciona_membro(ler_u16("Uid a adicionar:")),
+            4 => grupos[indice].remove_membro(ler_u16("Uid a remover:")),
+            5 => grupos[indice].listar_membros(),
             0 => break,
             _ => println!("Opção inválida."),
         }
@@ -585,16 +686,20 @@ fn editar_grupo(grupo: &mut Grupo) {
 fn menu_grupos(grupos: &mut Vec<Grupo>) {
     loop {
         println!("\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
-        match ler_u16("Opção:") {
+        match ler_opcao(4) {
             1 => {
                 let nome = ler_texto("Nome do grupo:");
-                let gid = ler_u16("Gid:");
-                grupos.push(Grupo::new(nome, gid));
+                if nome_grupo_repetido(grupos, &nome, None) {
+                    println!("Já existe um grupo com esse nome nesta lista.");
+                } else {
+                    let gid = ler_u16("Gid:");
+                    grupos.push(Grupo::new(nome, gid));
+                }
             }
             2 => {
                 listar_grupos(grupos);
                 if let Some(indice) = ler_indice(grupos.len()) {
-                    editar_grupo(&mut grupos[indice]);
+                    editar_grupo(grupos, indice);
                 }
             }
             3 => {
@@ -615,7 +720,7 @@ fn menu_grupos(grupos: &mut Vec<Grupo>) {
 fn menu_permissao(permissao: &mut Option<Permissao>) {
     loop {
         println!("\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
-        match ler_u16("Opção:") {
+        match ler_opcao(4) {
             1 => {
                 if permissao.is_some() {
                     println!("Já existe uma permissão. Use Editar ou Apagar.");
@@ -662,7 +767,7 @@ fn main() {
     loop {
         println!("\nMENU PRINCIPAL");
         println!("1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair");
-        match ler_u16("Opção:") {
+        match ler_opcao(5) {
             1 => menu_arquivos(&mut arquivos),
             2 => menu_diretorios(&mut diretorios, &mut arquivos),
             3 => menu_usuarios(&mut usuarios),

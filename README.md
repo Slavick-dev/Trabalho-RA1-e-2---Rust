@@ -46,7 +46,7 @@ Usuários e grupos mantêm listas de IDs independentes, conforme os métodos do 
 Adicionar um gid ao usuário não adiciona automaticamente seu uid ao grupo.
 Editar ou apagar usuários e grupos também não reescreve os IDs guardados nas demais estruturas.
 Não é necessário cadastrar previamente o dono ou grupo de um arquivo.
-IDs de associação repetidos no mesmo vetor são recusados; nomes e IDs dos cadastros podem se repetir.
+IDs de associação repetidos no mesmo vetor são recusados. Nomes repetidos na mesma lista são recusados na criação e na renomeação; a comparação diferencia maiúsculas de minúsculas. IDs dos cadastros podem se repetir.
 A permissão avulsa é independente das permissões de arquivos e diretórios.
 
 Entradas numéricas inválidas são informadas e solicitadas novamente.
@@ -87,7 +87,7 @@ Nomes vazios são recusados. Fim de entrada encerra o programa, sem ficar repeti
 ## Roteiro de teste manual
 
 1. Execute `cargo run`. Digite `abc`, `-1`, `65536` e depois `9`:
-   os três primeiros devem falhar na conversão de u16 e o último deve informar opção inválida.
+   todos devem receber: Opção inválida. Digite um número de 0 a 5.
 2. Entre em **1 — Arquivos**, escolha **1 — Criar** e informe:
    `teste`, `0`, `1000`, `1000`. Em **4 — Listar**, confira:
 
@@ -124,3 +124,7 @@ Nomes vazios são recusados. Fim de entrada encerra o programa, sem ficar repeti
    ou `abc` em listas preenchidas. Deve haver mensagem de erro, sem panic.
 10. Teste tamanho negativo, texto e um número maior que `18446744073709551615`;
     depois informe `0`. Termine com **0 — Sair** no menu principal.
+
+## Revisão e testes detalhados
+
+Consulte [REVISAO.md](REVISAO.md) para os problemas encontrados, as correções aplicadas, os resultados e as entradas exatas do roteiro manual.
