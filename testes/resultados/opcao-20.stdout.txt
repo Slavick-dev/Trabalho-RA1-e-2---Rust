@@ -1,0 +1,17 @@
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:

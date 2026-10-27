@@ -1,0 +1,16 @@
+Nome do diretório:
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Uid do dono:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:

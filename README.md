@@ -130,3 +130,27 @@ Nomes vazios são recusados. Fim de entrada encerra o programa, sem ficar repeti
 Consulte [REVISAO.md](REVISAO.md) para os problemas encontrados, as correções aplicadas, os resultados e as entradas exatas do roteiro manual.
 
 A [validação final](VALIDACAO_FINAL.md) contém a sessão completa como usuário, a repetição com erros intencionais e a tabela de conformidade de todos os requisitos. As transcrições integrais estão em [sessão normal](SESSAO_NORMAL.txt) e [sessão com erros](SESSAO_ERROS.txt).
+
+## Execução real e reprodução dos testes
+
+O [relatório de execução real](TESTE_EXECUCAO_REAL.md) registra a saída completa de compilação, as 73 etapas de menu e os 37 casos de estresse, com os logs integrais. A sessão completa está em [entrada.txt](entrada.txt).
+
+No Bash ou no cmd.exe:
+
+```sh
+cargo run < entrada.txt
+```
+
+No PowerShell:
+
+```powershell
+cmd /c "cargo run < entrada.txt"
+```
+
+Para repetir toda a bateria, com PowerShell 7 e Rust no PATH:
+
+```powershell
+pwsh -File testes/executar.ps1
+```
+
+Os arquivos dentro de `testes/` são verificações separadas; a implementação do programa continua somente em `src/main.rs`.

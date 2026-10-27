@@ -1,0 +1,90 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Nome do arquivo:
+Tamanho em bytes:
+Uid do dono:
+Gid do grupo:
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1
+Arquivo: item
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1
+Gid: 1
+Escolha um item de 1 a 1.
+Número do item:
+Item inválido. Escolha um número de 1 a 1.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1
+Arquivo: item
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1
+Gid: 1
+Escolha um item de 1 a 1.
+Número do item:
+Item inválido. Escolha um número de 1 a 1.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1
+Arquivo: item
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1
+Gid: 1
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+Programa encerrado.

@@ -1,0 +1,10 @@
+Gid: 1000
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:

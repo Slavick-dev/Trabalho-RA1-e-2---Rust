@@ -1,0 +1,8 @@
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:

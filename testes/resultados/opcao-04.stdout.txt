@@ -1,0 +1,22 @@
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+
+Item 2
+Arquivo: outro
+Tamanho: 10 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1001
+Gid: 1001
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:

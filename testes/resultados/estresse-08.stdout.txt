@@ -1,0 +1,87 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+Nome do diretório:
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Uid do dono:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1 - Diretório: d
+Uid: 1
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+
+Editar diretório: d
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+Opção inválida. Digite um número de 0 a 7.
+Opção:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+Programa encerrado.

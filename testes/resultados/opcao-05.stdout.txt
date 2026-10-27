@@ -1,0 +1,25 @@
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+
+Item 2
+Arquivo: outro
+Tamanho: 10 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1001
+Gid: 1001
+Escolha um item de 1 a 2.
+Número do item:
+
+Editar arquivo: teste
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:

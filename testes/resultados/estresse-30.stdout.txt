@@ -1,0 +1,341 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Nome do arquivo:
+Tamanho em bytes:
+Uid do dono:
+Gid do grupo:
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Nome do arquivo:
+Tamanho em bytes:
+Uid do dono:
+Gid do grupo:
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+Nome do diretório:
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Uid do dono:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+Nome do diretório:
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Uid do dono:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1 - Diretório: DA
+Uid: 10
+Permissoes: (700 / rwx------)
+Diretório vazio.
+
+Item 2 - Diretório: DB
+Uid: 20
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 2.
+Número do item:
+
+Editar diretório: DA
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+Item 1
+Arquivo: A
+Tamanho: 11 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 10
+Gid: 10
+
+Item 2
+Arquivo: B
+Tamanho: 22 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 20
+Gid: 20
+Escolha um item de 1 a 2.
+Número do item:
+Arquivo movido para o diretório.
+
+Editar diretório: DA
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1 - Diretório: DA
+Uid: 10
+Permissoes: (700 / rwx------)
+Arquivo: A
+Tamanho: 11 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 10
+Gid: 10
+
+Item 2 - Diretório: DB
+Uid: 20
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 2.
+Número do item:
+
+Editar diretório: DB
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+Item 1
+Arquivo: B
+Tamanho: 22 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 20
+Gid: 20
+Escolha um item de 1 a 1.
+Número do item:
+Arquivo movido para o diretório.
+
+Editar diretório: DB
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1 - Diretório: DA
+Uid: 10
+Permissoes: (700 / rwx------)
+Arquivo: A
+Tamanho: 11 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 10
+Gid: 10
+
+Item 2 - Diretório: DB
+Uid: 20
+Permissoes: (755 / rwxr-xr-x)
+Arquivo: B
+Tamanho: 22 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 20
+Gid: 20
+Escolha um item de 1 a 2.
+Número do item:
+
+Editar diretório: DA
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+Novo nome:
+
+Editar diretório: DA_edit
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+Novo uid:
+
+Editar diretório: DA_edit
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+Editar diretório: DA_edit
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1 - Diretório: DA_edit
+Uid: 30
+Permissoes: (000 / ---------)
+Arquivo: A
+Tamanho: 11 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 10
+Gid: 10
+
+Item 2 - Diretório: DB
+Uid: 20
+Permissoes: (755 / rwxr-xr-x)
+Arquivo: B
+Tamanho: 22 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 20
+Gid: 20
+Escolha um item de 1 a 2.
+Número do item:
+Diretório e seus arquivos apagados.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+Item 1 - Diretório: DB
+Uid: 20
+Permissoes: (755 / rwxr-xr-x)
+Arquivo: B
+Tamanho: 22 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 20
+Gid: 20
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+Programa encerrado.

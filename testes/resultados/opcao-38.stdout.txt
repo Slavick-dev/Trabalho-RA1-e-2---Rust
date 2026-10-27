@@ -1,0 +1,14 @@
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:

@@ -1,0 +1,10 @@
+Novo nome:
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:

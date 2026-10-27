@@ -1,0 +1,737 @@
+[
+  {
+    "opcao": "Principal / 1 Arquivos",
+    "entrada": [
+      "1"
+    ],
+    "contem": [
+      "ARQUIVOS"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 1 Criar teste",
+    "entrada": [
+      "1",
+      "teste",
+      "0",
+      "1000",
+      "1000"
+    ],
+    "contem": [
+      "Nome do arquivo:",
+      "Tamanho em bytes:"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 1 Criar outro",
+    "entrada": [
+      "1",
+      "outro",
+      "10",
+      "1001",
+      "1001"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 4 Listar e stat padrão",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Arquivo: teste\nTamanho: 0 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1000\nGid: 1000",
+      "Arquivo: outro"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 2 Editar",
+    "entrada": [
+      "2",
+      "1"
+    ],
+    "contem": [
+      "Editar arquivo: teste"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar arquivo / 1 Nome",
+    "entrada": [
+      "1",
+      "teste_editado"
+    ],
+    "contem": [
+      "Editar arquivo: teste_editado"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar arquivo / 2 Tamanho",
+    "entrada": [
+      "2",
+      "42"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar arquivo / 3 Permissões",
+    "entrada": [
+      "3",
+      "7",
+      "5",
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar arquivo / 4 Uid",
+    "entrada": [
+      "4",
+      "2000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar arquivo / 5 Gid",
+    "entrada": [
+      "5",
+      "3000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar arquivo / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [
+      "ARQUIVOS"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 4 Conferir edição e preservação do outro",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Arquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000",
+      "Arquivo: outro\nTamanho: 10 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1001\nGid: 1001"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 3 Apagar outro",
+    "entrada": [
+      "3",
+      "2"
+    ],
+    "contem": [
+      "Arquivo apagado."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivos / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [
+      "MENU PRINCIPAL"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Principal / 2 Diretórios",
+    "entrada": [
+      "2"
+    ],
+    "contem": [
+      "DIRETÓRIOS"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 1 Criar",
+    "entrada": [
+      "1",
+      "docs",
+      "7",
+      "5",
+      "5",
+      "1000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 4 Listar",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Diretório: docs",
+      "Permissoes: (755 / rwxr-xr-x)",
+      "Diretório vazio."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 2 Editar",
+    "entrada": [
+      "2",
+      "1"
+    ],
+    "contem": [
+      "Editar diretório: docs"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 1 Nome",
+    "entrada": [
+      "1",
+      "documentos"
+    ],
+    "contem": [
+      "Editar diretório: documentos"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 2 Permissões",
+    "entrada": [
+      "2",
+      "7",
+      "0",
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 3 Uid",
+    "entrada": [
+      "3",
+      "2000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 4 Adicionar arquivo",
+    "entrada": [
+      "4",
+      "1"
+    ],
+    "contem": [
+      "Arquivo movido para o diretório."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 7 Listar conteúdo e stat",
+    "entrada": [
+      "7"
+    ],
+    "contem": [
+      "Arquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 6 Editar arquivo interno",
+    "entrada": [
+      "6",
+      "1"
+    ],
+    "contem": [
+      "Editar arquivo: teste_editado"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivo interno / 3 alterar_permissao",
+    "entrada": [
+      "3",
+      "6",
+      "6",
+      "4"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Arquivo interno / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [
+      "Editar diretório: documentos"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 7 stat depois de alterar",
+    "entrada": [
+      "7"
+    ],
+    "contem": [
+      "Arquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 2000\nGid: 3000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 5 Remover arquivo",
+    "entrada": [
+      "5",
+      "teste_editado"
+    ],
+    "contem": [
+      "Arquivo apagado do diretório."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar diretório / 7 Confirmar vazio",
+    "entrada": [
+      "7"
+    ],
+    "contem": [
+      "Diretório vazio."
+    ],
+    "naoContem": [
+      "Arquivo:"
+    ]
+  },
+  {
+    "opcao": "Editar diretório / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [
+      "DIRETÓRIOS"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 4 Conferir campos editados",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Diretório: documentos\nUid: 2000\nPermissoes: (700 / rwx------)\nDiretório vazio."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 3 Apagar",
+    "entrada": [
+      "3",
+      "1"
+    ],
+    "contem": [
+      "Diretório e seus arquivos apagados."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 4 Confirmar exclusão",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Nenhum diretório cadastrado."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Diretórios / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Principal / 3 Usuários",
+    "entrada": [
+      "3"
+    ],
+    "contem": [
+      "USUÁRIOS"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 1 Criar",
+    "entrada": [
+      "1",
+      "Ana",
+      "1000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 4 Listar",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Usuário: Ana | Uid: 1000",
+      "Sem grupos."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 2 Editar",
+    "entrada": [
+      "2",
+      "1"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 1 Nome",
+    "entrada": [
+      "1",
+      "Ana_Editada"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 2 Uid",
+    "entrada": [
+      "2",
+      "2000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 3 Adicionar grupo",
+    "entrada": [
+      "3",
+      "1000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 5 Listar grupos",
+    "entrada": [
+      "5"
+    ],
+    "contem": [
+      "Gid: 1000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 4 Remover grupo",
+    "entrada": [
+      "4",
+      "1000"
+    ],
+    "contem": [
+      "Grupo removido do usuário."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 5 Confirmar sem grupos",
+    "entrada": [
+      "5"
+    ],
+    "contem": [
+      "Sem grupos."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar usuário / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 4 Conferir campos editados",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Usuário: Ana_Editada | Uid: 2000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 3 Apagar",
+    "entrada": [
+      "3",
+      "1"
+    ],
+    "contem": [
+      "Usuário apagado."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 4 Confirmar exclusão",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Nenhum usuário cadastrado."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Usuários / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Principal / 4 Grupos",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "GRUPOS"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 1 Criar",
+    "entrada": [
+      "1",
+      "alunos",
+      "1000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 4 Listar",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Grupo: alunos | Gid: 1000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 2 Editar",
+    "entrada": [
+      "2",
+      "1"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 1 Nome",
+    "entrada": [
+      "1",
+      "turma"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 2 Gid",
+    "entrada": [
+      "2",
+      "2000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 3 Adicionar membro",
+    "entrada": [
+      "3",
+      "1000"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 5 Listar membros",
+    "entrada": [
+      "5"
+    ],
+    "contem": [
+      "Uid: 1000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 4 Remover membro",
+    "entrada": [
+      "4",
+      "1000"
+    ],
+    "contem": [
+      "Membro removido do grupo."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 5 Confirmar sem membros",
+    "entrada": [
+      "5"
+    ],
+    "contem": [
+      "Sem membros."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Editar grupo / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 4 Conferir campos editados",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Grupo: turma | Gid: 2000"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 3 Apagar",
+    "entrada": [
+      "3",
+      "1"
+    ],
+    "contem": [
+      "Grupo apagado."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 4 Confirmar exclusão",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Nenhum grupo cadastrado."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Grupos / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Principal / 5 Permissão avulsa",
+    "entrada": [
+      "5"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 1 Criar",
+    "entrada": [
+      "1",
+      "6"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 4 Listar",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Permissão: 6 / rw-"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 2 Editar",
+    "entrada": [
+      "2",
+      "7"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 4 Conferir edição",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Permissão: 7 / rwx"
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 3 Apagar",
+    "entrada": [
+      "3"
+    ],
+    "contem": [
+      "Permissão apagada."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 4 Confirmar exclusão",
+    "entrada": [
+      "4"
+    ],
+    "contem": [
+      "Permissão não encontrada."
+    ],
+    "naoContem": []
+  },
+  {
+    "opcao": "Permissão / 0 Voltar",
+    "entrada": [
+      "0"
+    ],
+    "contem": [],
+    "naoContem": []
+  },
+  {
+    "opcao": "Principal / 0 Sair",
+    "entrada": [
+      "0"
+    ],
+    "contem": [
+      "Programa encerrado."
+    ],
+    "naoContem": []
+  }
+]

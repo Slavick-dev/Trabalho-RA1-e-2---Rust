@@ -1,0 +1,9 @@
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:

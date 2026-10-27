@@ -1,0 +1,15 @@
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:

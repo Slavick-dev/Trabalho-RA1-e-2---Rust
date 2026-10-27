@@ -1,0 +1,16 @@
+
+Item 1 - Diretório: documentos
+Uid: 2000
+Permissoes: (700 / rwx------)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+Diretório e seus arquivos apagados.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:

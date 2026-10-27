@@ -1,0 +1,45 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+Programa encerrado.

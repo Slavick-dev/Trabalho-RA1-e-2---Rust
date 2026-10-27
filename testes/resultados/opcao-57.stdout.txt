@@ -1,0 +1,10 @@
+Uid: 1000
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:

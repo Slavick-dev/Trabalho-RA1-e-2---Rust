@@ -1,0 +1,1061 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+=== 1. Principal / 1 Arquivos ===
+[DIGITADO] 1
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 2. Arquivos / 1 Criar teste ===
+[DIGITADO] 1
+Nome do arquivo:
+[DIGITADO] teste
+Tamanho em bytes:
+[DIGITADO] 0
+Uid do dono:
+[DIGITADO] 1000
+Gid do grupo:
+[DIGITADO] 1000
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 3. Arquivos / 1 Criar outro ===
+[DIGITADO] 1
+Nome do arquivo:
+[DIGITADO] outro
+Tamanho em bytes:
+[DIGITADO] 10
+Uid do dono:
+[DIGITADO] 1001
+Gid do grupo:
+[DIGITADO] 1001
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 4. Arquivos / 4 Listar e stat padrão ===
+[DIGITADO] 4
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+
+Item 2
+Arquivo: outro
+Tamanho: 10 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1001
+Gid: 1001
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 5. Arquivos / 2 Editar ===
+[DIGITADO] 2
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+
+Item 2
+Arquivo: outro
+Tamanho: 10 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1001
+Gid: 1001
+Escolha um item de 1 a 2.
+Número do item:
+[DIGITADO] 1
+
+Editar arquivo: teste
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 6. Editar arquivo / 1 Nome ===
+[DIGITADO] 1
+Novo nome:
+[DIGITADO] teste_editado
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 7. Editar arquivo / 2 Tamanho ===
+[DIGITADO] 2
+Novo tamanho:
+[DIGITADO] 42
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 8. Editar arquivo / 3 Permissões ===
+[DIGITADO] 3
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 7
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 5
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 0
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 9. Editar arquivo / 4 Uid ===
+[DIGITADO] 4
+Novo uid:
+[DIGITADO] 2000
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 10. Editar arquivo / 5 Gid ===
+[DIGITADO] 5
+Novo gid:
+[DIGITADO] 3000
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 11. Editar arquivo / 0 Voltar ===
+[DIGITADO] 0
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 12. Arquivos / 4 Conferir edição e preservação do outro ===
+[DIGITADO] 4
+
+Item 1
+Arquivo: teste_editado
+Tamanho: 42 bytes
+Permissoes: (750 / rwxr-x---)
+Uid: 2000
+Gid: 3000
+
+Item 2
+Arquivo: outro
+Tamanho: 10 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1001
+Gid: 1001
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 13. Arquivos / 3 Apagar outro ===
+[DIGITADO] 3
+
+Item 1
+Arquivo: teste_editado
+Tamanho: 42 bytes
+Permissoes: (750 / rwxr-x---)
+Uid: 2000
+Gid: 3000
+
+Item 2
+Arquivo: outro
+Tamanho: 10 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1001
+Gid: 1001
+Escolha um item de 1 a 2.
+Número do item:
+[DIGITADO] 2
+Arquivo apagado.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 14. Arquivos / 0 Voltar ===
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+=== 15. Principal / 2 Diretórios ===
+[DIGITADO] 2
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 16. Diretórios / 1 Criar ===
+[DIGITADO] 1
+Nome do diretório:
+[DIGITADO] docs
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 7
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 5
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 5
+Uid do dono:
+[DIGITADO] 1000
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 17. Diretórios / 4 Listar ===
+[DIGITADO] 4
+
+Item 1 - Diretório: docs
+Uid: 1000
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 18. Diretórios / 2 Editar ===
+[DIGITADO] 2
+
+Item 1 - Diretório: docs
+Uid: 1000
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 19. Editar diretório / 1 Nome ===
+[DIGITADO] 1
+Novo nome:
+[DIGITADO] documentos
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 20. Editar diretório / 2 Permissões ===
+[DIGITADO] 2
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 7
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 0
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 0
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 21. Editar diretório / 3 Uid ===
+[DIGITADO] 3
+Novo uid:
+[DIGITADO] 2000
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 22. Editar diretório / 4 Adicionar arquivo ===
+[DIGITADO] 4
+
+Item 1
+Arquivo: teste_editado
+Tamanho: 42 bytes
+Permissoes: (750 / rwxr-x---)
+Uid: 2000
+Gid: 3000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Arquivo movido para o diretório.
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 23. Editar diretório / 7 Listar conteúdo e stat ===
+[DIGITADO] 7
+Arquivo: teste_editado
+Tamanho: 42 bytes
+Permissoes: (750 / rwxr-x---)
+Uid: 2000
+Gid: 3000
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 24. Editar diretório / 6 Editar arquivo interno ===
+[DIGITADO] 6
+
+Item 1
+Arquivo: teste_editado
+Tamanho: 42 bytes
+Permissoes: (750 / rwxr-x---)
+Uid: 2000
+Gid: 3000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 25. Arquivo interno / 3 alterar_permissao ===
+[DIGITADO] 3
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 6
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 6
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 4
+
+Editar arquivo: teste_editado
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+=== 26. Arquivo interno / 0 Voltar ===
+[DIGITADO] 0
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 27. Editar diretório / 7 stat depois de alterar ===
+[DIGITADO] 7
+Arquivo: teste_editado
+Tamanho: 42 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 2000
+Gid: 3000
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 28. Editar diretório / 5 Remover arquivo ===
+[DIGITADO] 5
+Nome do arquivo a apagar:
+[DIGITADO] teste_editado
+Arquivo apagado do diretório.
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 29. Editar diretório / 7 Confirmar vazio ===
+[DIGITADO] 7
+Diretório vazio.
+
+Editar diretório: documentos
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+=== 30. Editar diretório / 0 Voltar ===
+[DIGITADO] 0
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 31. Diretórios / 4 Conferir campos editados ===
+[DIGITADO] 4
+
+Item 1 - Diretório: documentos
+Uid: 2000
+Permissoes: (700 / rwx------)
+Diretório vazio.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 32. Diretórios / 3 Apagar ===
+[DIGITADO] 3
+
+Item 1 - Diretório: documentos
+Uid: 2000
+Permissoes: (700 / rwx------)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Diretório e seus arquivos apagados.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 33. Diretórios / 4 Confirmar exclusão ===
+[DIGITADO] 4
+Nenhum diretório cadastrado.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+=== 34. Diretórios / 0 Voltar ===
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+=== 35. Principal / 3 Usuários ===
+[DIGITADO] 3
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 36. Usuários / 1 Criar ===
+[DIGITADO] 1
+Nome do usuário:
+[DIGITADO] Ana
+Uid:
+[DIGITADO] 1000
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 37. Usuários / 4 Listar ===
+[DIGITADO] 4
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 38. Usuários / 2 Editar ===
+[DIGITADO] 2
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 39. Editar usuário / 1 Nome ===
+[DIGITADO] 1
+Novo nome:
+[DIGITADO] Ana_Editada
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 40. Editar usuário / 2 Uid ===
+[DIGITADO] 2
+Novo uid:
+[DIGITADO] 2000
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 41. Editar usuário / 3 Adicionar grupo ===
+[DIGITADO] 3
+Gid a adicionar:
+[DIGITADO] 1000
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 42. Editar usuário / 5 Listar grupos ===
+[DIGITADO] 5
+Gid: 1000
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 43. Editar usuário / 4 Remover grupo ===
+[DIGITADO] 4
+Gid a remover:
+[DIGITADO] 1000
+Grupo removido do usuário.
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 44. Editar usuário / 5 Confirmar sem grupos ===
+[DIGITADO] 5
+Sem grupos.
+
+Editar usuário: Ana_Editada
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+=== 45. Editar usuário / 0 Voltar ===
+[DIGITADO] 0
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 46. Usuários / 4 Conferir campos editados ===
+[DIGITADO] 4
+
+Item 1 - Usuário: Ana_Editada | Uid: 2000
+Sem grupos.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 47. Usuários / 3 Apagar ===
+[DIGITADO] 3
+
+Item 1 - Usuário: Ana_Editada | Uid: 2000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Usuário apagado.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 48. Usuários / 4 Confirmar exclusão ===
+[DIGITADO] 4
+Nenhum usuário cadastrado.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 49. Usuários / 0 Voltar ===
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+=== 50. Principal / 4 Grupos ===
+[DIGITADO] 4
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 51. Grupos / 1 Criar ===
+[DIGITADO] 1
+Nome do grupo:
+[DIGITADO] alunos
+Gid:
+[DIGITADO] 1000
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 52. Grupos / 4 Listar ===
+[DIGITADO] 4
+
+Item 1 - Grupo: alunos | Gid: 1000
+Sem membros.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 53. Grupos / 2 Editar ===
+[DIGITADO] 2
+
+Item 1 - Grupo: alunos | Gid: 1000
+Sem membros.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 54. Editar grupo / 1 Nome ===
+[DIGITADO] 1
+Novo nome:
+[DIGITADO] turma
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 55. Editar grupo / 2 Gid ===
+[DIGITADO] 2
+Novo gid:
+[DIGITADO] 2000
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 56. Editar grupo / 3 Adicionar membro ===
+[DIGITADO] 3
+Uid a adicionar:
+[DIGITADO] 1000
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 57. Editar grupo / 5 Listar membros ===
+[DIGITADO] 5
+Uid: 1000
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 58. Editar grupo / 4 Remover membro ===
+[DIGITADO] 4
+Uid a remover:
+[DIGITADO] 1000
+Membro removido do grupo.
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 59. Editar grupo / 5 Confirmar sem membros ===
+[DIGITADO] 5
+Sem membros.
+
+Editar grupo: turma
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+=== 60. Editar grupo / 0 Voltar ===
+[DIGITADO] 0
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 61. Grupos / 4 Conferir campos editados ===
+[DIGITADO] 4
+
+Item 1 - Grupo: turma | Gid: 2000
+Sem membros.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 62. Grupos / 3 Apagar ===
+[DIGITADO] 3
+
+Item 1 - Grupo: turma | Gid: 2000
+Sem membros.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Grupo apagado.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 63. Grupos / 4 Confirmar exclusão ===
+[DIGITADO] 4
+Nenhum grupo cadastrado.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 64. Grupos / 0 Voltar ===
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+=== 65. Principal / 5 Permissão avulsa ===
+[DIGITADO] 5
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 66. Permissão / 1 Criar ===
+[DIGITADO] 1
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 6
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 67. Permissão / 4 Listar ===
+[DIGITADO] 4
+Permissão: 6 / rw-
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 68. Permissão / 2 Editar ===
+[DIGITADO] 2
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 7
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 69. Permissão / 4 Conferir edição ===
+[DIGITADO] 4
+Permissão: 7 / rwx
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 70. Permissão / 3 Apagar ===
+[DIGITADO] 3
+Permissão apagada.
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 71. Permissão / 4 Confirmar exclusão ===
+[DIGITADO] 4
+Permissão não encontrada.
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+=== 72. Permissão / 0 Voltar ===
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+=== 73. Principal / 0 Sair ===
+[DIGITADO] 0
+Programa encerrado.

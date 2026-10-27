@@ -1,0 +1,189 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 0 / ---
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 1 / --x
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 2 / -w-
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 3 / -wx
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 4 / r--
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 5 / r-x
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 6 / rw-
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão: 7 / rwx
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão apagada.
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+Permissão não encontrada.
+
+PERMISSÃO AVULSA
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+Programa encerrado.

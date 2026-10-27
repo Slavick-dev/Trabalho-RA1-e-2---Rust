@@ -1,0 +1,1234 @@
+{
+  "compilacao": [
+    {
+      "comando": "cargo build",
+      "captura": {
+        "ms": 3589,
+        "saida": "",
+        "timeout": false,
+        "codigo": 0,
+        "erro": "   Compiling trabalho_ra1_ra2 v0.1.0 (C:\\Users\\yagok\\Documents\\ChatGPT\\PUC\\Trabalho-RA1-e-2---Rust)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.38s\n"
+      }
+    },
+    {
+      "comando": "cargo clippy --all-targets -- -D warnings",
+      "captura": {
+        "ms": 2153,
+        "saida": "",
+        "timeout": false,
+        "codigo": 0,
+        "erro": "    Checking trabalho_ra1_ra2 v0.1.0 (C:\\Users\\yagok\\Documents\\ChatGPT\\PUC\\Trabalho-RA1-e-2---Rust)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.73s\n"
+      }
+    }
+  ],
+  "falhas": 0,
+  "cargoRun": {
+    "ms": 603,
+    "saida": "\nMENU PRINCIPAL\n1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair\nOpção:\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nNome do arquivo:\nTamanho em bytes:\nUid do dono:\nGid do grupo:\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nNome do arquivo:\nTamanho em bytes:\nUid do dono:\nGid do grupo:\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1\nArquivo: teste\nTamanho: 0 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1000\nGid: 1000\n\nItem 2\nArquivo: outro\nTamanho: 10 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1001\nGid: 1001\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1\nArquivo: teste\nTamanho: 0 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1000\nGid: 1000\n\nItem 2\nArquivo: outro\nTamanho: 10 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1001\nGid: 1001\nEscolha um item de 1 a 2.\nNúmero do item:\n\nEditar arquivo: teste\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\nNovo nome:\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\nNovo tamanho:\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\nDono:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nGrupo:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nOutros:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\nNovo uid:\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\nNovo gid:\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1\nArquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000\n\nItem 2\nArquivo: outro\nTamanho: 10 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1001\nGid: 1001\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1\nArquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000\n\nItem 2\nArquivo: outro\nTamanho: 10 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 1001\nGid: 1001\nEscolha um item de 1 a 2.\nNúmero do item:\nArquivo apagado.\n\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nMENU PRINCIPAL\n1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair\nOpção:\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\nNome do diretório:\nDono:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nGrupo:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nOutros:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nUid do dono:\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Diretório: docs\nUid: 1000\nPermissoes: (755 / rwxr-xr-x)\nDiretório vazio.\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Diretório: docs\nUid: 1000\nPermissoes: (755 / rwxr-xr-x)\nDiretório vazio.\nEscolha um item de 1 a 1.\nNúmero do item:\n\nEditar diretório: docs\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nNovo nome:\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nDono:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nGrupo:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nOutros:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nNovo uid:\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\n\nItem 1\nArquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000\nEscolha um item de 1 a 1.\nNúmero do item:\nArquivo movido para o diretório.\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nArquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\n\nItem 1\nArquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (750 / rwxr-x---)\nUid: 2000\nGid: 3000\nEscolha um item de 1 a 1.\nNúmero do item:\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\nDono:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nGrupo:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\nOutros:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\n\nEditar arquivo: teste_editado\n1 - Nome\n2 - Tamanho\n3 - Permissões\n4 - Uid\n5 - Gid\n0 - Voltar\nOpção:\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nArquivo: teste_editado\nTamanho: 42 bytes\nPermissoes: (664 / rw-rw-r--)\nUid: 2000\nGid: 3000\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nNome do arquivo a apagar:\nArquivo apagado do diretório.\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\nDiretório vazio.\n\nEditar diretório: documentos\n1 - Nome\n2 - Permissões\n3 - Uid\n4 - Mover arquivo para cá\n5 - Apagar arquivo pelo nome\n6 - Editar arquivo\n7 - Listar conteúdo\n0 - Voltar\nOpção:\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Diretório: documentos\nUid: 2000\nPermissoes: (700 / rwx------)\nDiretório vazio.\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Diretório: documentos\nUid: 2000\nPermissoes: (700 / rwx------)\nDiretório vazio.\nEscolha um item de 1 a 1.\nNúmero do item:\nDiretório e seus arquivos apagados.\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\nNenhum diretório cadastrado.\n\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar\nOpção:\n\nMENU PRINCIPAL\n1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair\nOpção:\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nNome do usuário:\nUid:\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Usuário: Ana | Uid: 1000\nSem grupos.\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Usuário: Ana | Uid: 1000\nSem grupos.\nEscolha um item de 1 a 1.\nNúmero do item:\n\nEditar usuário: Ana\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\nNovo nome:\n\nEditar usuário: Ana_Editada\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\nNovo uid:\n\nEditar usuário: Ana_Editada\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\nGid a adicionar:\n\nEditar usuário: Ana_Editada\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\nGid: 1000\n\nEditar usuário: Ana_Editada\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\nGid a remover:\nGrupo removido do usuário.\n\nEditar usuário: Ana_Editada\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\nSem grupos.\n\nEditar usuário: Ana_Editada\n1 - Nome\n2 - Uid\n3 - Adicionar grupo\n4 - Remover grupo\n5 - Listar grupos\n0 - Voltar\nOpção:\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Usuário: Ana_Editada | Uid: 2000\nSem grupos.\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Usuário: Ana_Editada | Uid: 2000\nSem grupos.\nEscolha um item de 1 a 1.\nNúmero do item:\nUsuário apagado.\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nNenhum usuário cadastrado.\n\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nMENU PRINCIPAL\n1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair\nOpção:\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nNome do grupo:\nGid:\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Grupo: alunos | Gid: 1000\nSem membros.\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Grupo: alunos | Gid: 1000\nSem membros.\nEscolha um item de 1 a 1.\nNúmero do item:\n\nEditar grupo: alunos\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\nNovo nome:\n\nEditar grupo: turma\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\nNovo gid:\n\nEditar grupo: turma\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\nUid a adicionar:\n\nEditar grupo: turma\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\nUid: 1000\n\nEditar grupo: turma\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\nUid a remover:\nMembro removido do grupo.\n\nEditar grupo: turma\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\nSem membros.\n\nEditar grupo: turma\n1 - Nome\n2 - Gid\n3 - Adicionar membro\n4 - Remover membro\n5 - Listar membros\n0 - Voltar\nOpção:\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Grupo: turma | Gid: 2000\nSem membros.\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nItem 1 - Grupo: turma | Gid: 2000\nSem membros.\nEscolha um item de 1 a 1.\nNúmero do item:\nGrupo apagado.\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nNenhum grupo cadastrado.\n\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nMENU PRINCIPAL\n1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair\nOpção:\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nPermissão: 6 / rw-\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nPermissão: 7 / rwx\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nPermissão apagada.\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\nPermissão não encontrada.\n\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar\nOpção:\n\nMENU PRINCIPAL\n1 - Arquivos\n2 - Diretórios\n3 - Usuários\n4 - Grupos\n5 - Permissão avulsa\n0 - Sair\nOpção:\nPrograma encerrado.\n",
+    "timeout": false,
+    "codigo": 0,
+    "erro": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.43s\n     Running `target\\debug\\trabalho_ra1_ra2.exe`\n"
+  },
+  "menu": [
+    {
+      "problemas": [],
+      "opcao": "Principal / 1 Arquivos",
+      "saida": "\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1"
+      ],
+      "numero": 1,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 1 Criar teste",
+      "saida": "Nome do arquivo:\r\nTamanho em bytes:\r\nUid do dono:\r\nGid do grupo:\r\n\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "teste",
+        "0",
+        "1000",
+        "1000"
+      ],
+      "numero": 2,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 1 Criar outro",
+      "saida": "Nome do arquivo:\r\nTamanho em bytes:\r\nUid do dono:\r\nGid do grupo:\r\n\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "outro",
+        "10",
+        "1001",
+        "1001"
+      ],
+      "numero": 3,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 4 Listar e stat padrão",
+      "saida": "\r\nItem 1\r\nArquivo: teste\r\nTamanho: 0 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 1000\r\nGid: 1000\r\n\r\nItem 2\r\nArquivo: outro\r\nTamanho: 10 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 1001\r\nGid: 1001\r\n\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 4,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 2 Editar",
+      "saida": "\r\nItem 1\r\nArquivo: teste\r\nTamanho: 0 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 1000\r\nGid: 1000\r\n\r\nItem 2\r\nArquivo: outro\r\nTamanho: 10 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 1001\r\nGid: 1001\r\nEscolha um item de 1 a 2.\r\nNúmero do item:\r\n\r\nEditar arquivo: teste\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "1"
+      ],
+      "numero": 5,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar arquivo / 1 Nome",
+      "saida": "Novo nome:\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "teste_editado"
+      ],
+      "numero": 6,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar arquivo / 2 Tamanho",
+      "saida": "Novo tamanho:\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "42"
+      ],
+      "numero": 7,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar arquivo / 3 Permissões",
+      "saida": "Dono:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nGrupo:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nOutros:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "7",
+        "5",
+        "0"
+      ],
+      "numero": 8,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar arquivo / 4 Uid",
+      "saida": "Novo uid:\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4",
+        "2000"
+      ],
+      "numero": 9,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar arquivo / 5 Gid",
+      "saida": "Novo gid:\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5",
+        "3000"
+      ],
+      "numero": 10,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar arquivo / 0 Voltar",
+      "saida": "\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 11,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 4 Conferir edição e preservação do outro",
+      "saida": "\r\nItem 1\r\nArquivo: teste_editado\r\nTamanho: 42 bytes\r\nPermissoes: (750 / rwxr-x---)\r\nUid: 2000\r\nGid: 3000\r\n\r\nItem 2\r\nArquivo: outro\r\nTamanho: 10 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 1001\r\nGid: 1001\r\n\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 12,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 3 Apagar outro",
+      "saida": "\r\nItem 1\r\nArquivo: teste_editado\r\nTamanho: 42 bytes\r\nPermissoes: (750 / rwxr-x---)\r\nUid: 2000\r\nGid: 3000\r\n\r\nItem 2\r\nArquivo: outro\r\nTamanho: 10 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 1001\r\nGid: 1001\r\nEscolha um item de 1 a 2.\r\nNúmero do item:\r\nArquivo apagado.\r\n\r\nARQUIVOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "2"
+      ],
+      "numero": 13,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivos / 0 Voltar",
+      "saida": "\r\nMENU PRINCIPAL\r\n1 - Arquivos\r\n2 - Diretórios\r\n3 - Usuários\r\n4 - Grupos\r\n5 - Permissão avulsa\r\n0 - Sair\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 14,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Principal / 2 Diretórios",
+      "saida": "\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2"
+      ],
+      "numero": 15,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 1 Criar",
+      "saida": "Nome do diretório:\r\nDono:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nGrupo:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nOutros:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nUid do dono:\r\n\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "docs",
+        "7",
+        "5",
+        "5",
+        "1000"
+      ],
+      "numero": 16,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 4 Listar",
+      "saida": "\r\nItem 1 - Diretório: docs\r\nUid: 1000\r\nPermissoes: (755 / rwxr-xr-x)\r\nDiretório vazio.\r\n\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 17,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 2 Editar",
+      "saida": "\r\nItem 1 - Diretório: docs\r\nUid: 1000\r\nPermissoes: (755 / rwxr-xr-x)\r\nDiretório vazio.\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\n\r\nEditar diretório: docs\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "1"
+      ],
+      "numero": 18,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 1 Nome",
+      "saida": "Novo nome:\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "documentos"
+      ],
+      "numero": 19,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 2 Permissões",
+      "saida": "Dono:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nGrupo:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nOutros:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "7",
+        "0",
+        "0"
+      ],
+      "numero": 20,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 3 Uid",
+      "saida": "Novo uid:\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "2000"
+      ],
+      "numero": 21,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 4 Adicionar arquivo",
+      "saida": "\r\nItem 1\r\nArquivo: teste_editado\r\nTamanho: 42 bytes\r\nPermissoes: (750 / rwxr-x---)\r\nUid: 2000\r\nGid: 3000\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\nArquivo movido para o diretório.\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4",
+        "1"
+      ],
+      "numero": 22,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 7 Listar conteúdo e stat",
+      "saida": "Arquivo: teste_editado\r\nTamanho: 42 bytes\r\nPermissoes: (750 / rwxr-x---)\r\nUid: 2000\r\nGid: 3000\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "7"
+      ],
+      "numero": 23,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 6 Editar arquivo interno",
+      "saida": "\r\nItem 1\r\nArquivo: teste_editado\r\nTamanho: 42 bytes\r\nPermissoes: (750 / rwxr-x---)\r\nUid: 2000\r\nGid: 3000\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "6",
+        "1"
+      ],
+      "numero": 24,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivo interno / 3 alterar_permissao",
+      "saida": "Dono:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nGrupo:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\nOutros:\r\nPermissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\n\r\nEditar arquivo: teste_editado\r\n1 - Nome\r\n2 - Tamanho\r\n3 - Permissões\r\n4 - Uid\r\n5 - Gid\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "6",
+        "6",
+        "4"
+      ],
+      "numero": 25,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Arquivo interno / 0 Voltar",
+      "saida": "\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 26,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 7 stat depois de alterar",
+      "saida": "Arquivo: teste_editado\r\nTamanho: 42 bytes\r\nPermissoes: (664 / rw-rw-r--)\r\nUid: 2000\r\nGid: 3000\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "7"
+      ],
+      "numero": 27,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 5 Remover arquivo",
+      "saida": "Nome do arquivo a apagar:\r\nArquivo apagado do diretório.\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5",
+        "teste_editado"
+      ],
+      "numero": 28,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 7 Confirmar vazio",
+      "saida": "Diretório vazio.\r\n\r\nEditar diretório: documentos\r\n1 - Nome\r\n2 - Permissões\r\n3 - Uid\r\n4 - Mover arquivo para cá\r\n5 - Apagar arquivo pelo nome\r\n6 - Editar arquivo\r\n7 - Listar conteúdo\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "7"
+      ],
+      "numero": 29,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar diretório / 0 Voltar",
+      "saida": "\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 30,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 4 Conferir campos editados",
+      "saida": "\r\nItem 1 - Diretório: documentos\r\nUid: 2000\r\nPermissoes: (700 / rwx------)\r\nDiretório vazio.\r\n\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 31,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 3 Apagar",
+      "saida": "\r\nItem 1 - Diretório: documentos\r\nUid: 2000\r\nPermissoes: (700 / rwx------)\r\nDiretório vazio.\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\nDiretório e seus arquivos apagados.\r\n\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "1"
+      ],
+      "numero": 32,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 4 Confirmar exclusão",
+      "saida": "Nenhum diretório cadastrado.\r\n\r\nDIRETÓRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar diretório e seus arquivos\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 33,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Diretórios / 0 Voltar",
+      "saida": "\r\nMENU PRINCIPAL\r\n1 - Arquivos\r\n2 - Diretórios\r\n3 - Usuários\r\n4 - Grupos\r\n5 - Permissão avulsa\r\n0 - Sair\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 34,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Principal / 3 Usuários",
+      "saida": "\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3"
+      ],
+      "numero": 35,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 1 Criar",
+      "saida": "Nome do usuário:\r\nUid:\r\n\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "Ana",
+        "1000"
+      ],
+      "numero": 36,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 4 Listar",
+      "saida": "\r\nItem 1 - Usuário: Ana | Uid: 1000\r\nSem grupos.\r\n\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 37,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 2 Editar",
+      "saida": "\r\nItem 1 - Usuário: Ana | Uid: 1000\r\nSem grupos.\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\n\r\nEditar usuário: Ana\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "1"
+      ],
+      "numero": 38,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 1 Nome",
+      "saida": "Novo nome:\r\n\r\nEditar usuário: Ana_Editada\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "Ana_Editada"
+      ],
+      "numero": 39,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 2 Uid",
+      "saida": "Novo uid:\r\n\r\nEditar usuário: Ana_Editada\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "2000"
+      ],
+      "numero": 40,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 3 Adicionar grupo",
+      "saida": "Gid a adicionar:\r\n\r\nEditar usuário: Ana_Editada\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "1000"
+      ],
+      "numero": 41,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 5 Listar grupos",
+      "saida": "Gid: 1000\r\n\r\nEditar usuário: Ana_Editada\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5"
+      ],
+      "numero": 42,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 4 Remover grupo",
+      "saida": "Gid a remover:\r\nGrupo removido do usuário.\r\n\r\nEditar usuário: Ana_Editada\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4",
+        "1000"
+      ],
+      "numero": 43,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 5 Confirmar sem grupos",
+      "saida": "Sem grupos.\r\n\r\nEditar usuário: Ana_Editada\r\n1 - Nome\r\n2 - Uid\r\n3 - Adicionar grupo\r\n4 - Remover grupo\r\n5 - Listar grupos\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5"
+      ],
+      "numero": 44,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar usuário / 0 Voltar",
+      "saida": "\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 45,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 4 Conferir campos editados",
+      "saida": "\r\nItem 1 - Usuário: Ana_Editada | Uid: 2000\r\nSem grupos.\r\n\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 46,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 3 Apagar",
+      "saida": "\r\nItem 1 - Usuário: Ana_Editada | Uid: 2000\r\nSem grupos.\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\nUsuário apagado.\r\n\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "1"
+      ],
+      "numero": 47,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 4 Confirmar exclusão",
+      "saida": "Nenhum usuário cadastrado.\r\n\r\nUSUÁRIOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 48,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Usuários / 0 Voltar",
+      "saida": "\r\nMENU PRINCIPAL\r\n1 - Arquivos\r\n2 - Diretórios\r\n3 - Usuários\r\n4 - Grupos\r\n5 - Permissão avulsa\r\n0 - Sair\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 49,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Principal / 4 Grupos",
+      "saida": "\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 50,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 1 Criar",
+      "saida": "Nome do grupo:\r\nGid:\r\n\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "alunos",
+        "1000"
+      ],
+      "numero": 51,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 4 Listar",
+      "saida": "\r\nItem 1 - Grupo: alunos | Gid: 1000\r\nSem membros.\r\n\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 52,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 2 Editar",
+      "saida": "\r\nItem 1 - Grupo: alunos | Gid: 1000\r\nSem membros.\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\n\r\nEditar grupo: alunos\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "1"
+      ],
+      "numero": 53,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 1 Nome",
+      "saida": "Novo nome:\r\n\r\nEditar grupo: turma\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "turma"
+      ],
+      "numero": 54,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 2 Gid",
+      "saida": "Novo gid:\r\n\r\nEditar grupo: turma\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "2000"
+      ],
+      "numero": 55,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 3 Adicionar membro",
+      "saida": "Uid a adicionar:\r\n\r\nEditar grupo: turma\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "1000"
+      ],
+      "numero": 56,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 5 Listar membros",
+      "saida": "Uid: 1000\r\n\r\nEditar grupo: turma\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5"
+      ],
+      "numero": 57,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 4 Remover membro",
+      "saida": "Uid a remover:\r\nMembro removido do grupo.\r\n\r\nEditar grupo: turma\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4",
+        "1000"
+      ],
+      "numero": 58,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 5 Confirmar sem membros",
+      "saida": "Sem membros.\r\n\r\nEditar grupo: turma\r\n1 - Nome\r\n2 - Gid\r\n3 - Adicionar membro\r\n4 - Remover membro\r\n5 - Listar membros\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5"
+      ],
+      "numero": 59,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Editar grupo / 0 Voltar",
+      "saida": "\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 60,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 4 Conferir campos editados",
+      "saida": "\r\nItem 1 - Grupo: turma | Gid: 2000\r\nSem membros.\r\n\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 61,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 3 Apagar",
+      "saida": "\r\nItem 1 - Grupo: turma | Gid: 2000\r\nSem membros.\r\nEscolha um item de 1 a 1.\r\nNúmero do item:\r\nGrupo apagado.\r\n\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3",
+        "1"
+      ],
+      "numero": 62,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 4 Confirmar exclusão",
+      "saida": "Nenhum grupo cadastrado.\r\n\r\nGRUPOS\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 63,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Grupos / 0 Voltar",
+      "saida": "\r\nMENU PRINCIPAL\r\n1 - Arquivos\r\n2 - Diretórios\r\n3 - Usuários\r\n4 - Grupos\r\n5 - Permissão avulsa\r\n0 - Sair\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 64,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Principal / 5 Permissão avulsa",
+      "saida": "\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "5"
+      ],
+      "numero": 65,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 1 Criar",
+      "saida": "Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\n\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "1",
+        "6"
+      ],
+      "numero": 66,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 4 Listar",
+      "saida": "Permissão: 6 / rw-\r\n\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 67,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 2 Editar",
+      "saida": "Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):\r\n\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "2",
+        "7"
+      ],
+      "numero": 68,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 4 Conferir edição",
+      "saida": "Permissão: 7 / rwx\r\n\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 69,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 3 Apagar",
+      "saida": "Permissão apagada.\r\n\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "3"
+      ],
+      "numero": 70,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 4 Confirmar exclusão",
+      "saida": "Permissão não encontrada.\r\n\r\nPERMISSÃO AVULSA\r\n1 - Criar\r\n2 - Editar\r\n3 - Apagar\r\n4 - Listar\r\n0 - Voltar\r\nOpção:\r\n",
+      "entrada": [
+        "4"
+      ],
+      "numero": 71,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Permissão / 0 Voltar",
+      "saida": "\r\nMENU PRINCIPAL\r\n1 - Arquivos\r\n2 - Diretórios\r\n3 - Usuários\r\n4 - Grupos\r\n5 - Permissão avulsa\r\n0 - Sair\r\nOpção:\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 72,
+      "ok": true
+    },
+    {
+      "problemas": [],
+      "opcao": "Principal / 0 Sair",
+      "saida": "Programa encerrado.\r\n",
+      "entrada": [
+        "0"
+      ],
+      "numero": 73,
+      "ok": true
+    }
+  ],
+  "hashFonte": "67E5B1C6B00BC808ED0733DB0C7C1D87964E3CB72E46E87A42635AAB129FEC66",
+  "estresse": [
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 53,
+      "numero": 1,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em principal",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 54,
+      "numero": 2,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em arquivos",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 82,
+      "numero": 3,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em diretorios",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 69,
+      "numero": 4,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em usuarios",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 72,
+      "numero": 5,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em grupos",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 142,
+      "numero": 6,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em permissao",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 76,
+      "numero": 7,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em editar arquivo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 58,
+      "numero": 8,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em editar diretorio",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 44,
+      "numero": 9,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em editar usuario",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 54,
+      "numero": 10,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "entradas ruins em editar grupo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 48,
+      "numero": 11,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "limites u16 e u64",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 38,
+      "numero": 12,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "listar editar e apagar tudo vazio",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 35,
+      "numero": 13,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "arquivo ausente no diretorio",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 44,
+      "numero": 14,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "indice inexistente em arquivo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 247,
+      "numero": 15,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "nome vazio e com 1200 caracteres em arquivo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 211,
+      "numero": 16,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "indice inexistente em diretorio",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 115,
+      "numero": 17,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "nome vazio e com 1200 caracteres em diretorio",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 245,
+      "numero": 18,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "indice inexistente em usuario",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 105,
+      "numero": 19,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "nome vazio e com 1200 caracteres em usuario",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 81,
+      "numero": 20,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "indice inexistente em grupo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 114,
+      "numero": 21,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "nome vazio e com 1200 caracteres em grupo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 159,
+      "numero": 22,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "gid duplicado e ausente no usuario",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 118,
+      "numero": 23,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "uid duplicado e ausente no grupo",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 84,
+      "numero": 24,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "oito combinacoes de permissao",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 49,
+      "numero": 25,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "permissao invalida e recuperacao",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 189,
+      "numero": 26,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "mil opcoes inexistentes e recuperacao",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 187,
+      "numero": 27,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "preservacao do arquivo 2 ao editar e apagar arquivo 1",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 85,
+      "numero": 28,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "preservacao do usuario 2 ao editar e apagar usuario 1",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 68,
+      "numero": 29,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "preservacao do grupo 2 ao editar e apagar grupo 1",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 81,
+      "numero": 30,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": null,
+      "nome": "preservacao do diretorio 2 e arquivo interno",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 51,
+      "numero": 31,
+      "codigo": 0,
+      "eof": true,
+      "operacoes": null,
+      "nome": "EOF no principal",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 42,
+      "numero": 32,
+      "codigo": 0,
+      "eof": true,
+      "operacoes": null,
+      "nome": "EOF no nome",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 67,
+      "numero": 33,
+      "codigo": 0,
+      "eof": true,
+      "operacoes": null,
+      "nome": "EOF no uid",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 59,
+      "numero": 34,
+      "codigo": 0,
+      "eof": true,
+      "operacoes": null,
+      "nome": "EOF no tamanho",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 52,
+      "numero": 35,
+      "codigo": 0,
+      "eof": true,
+      "operacoes": null,
+      "nome": "EOF no meio das permissoes",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 46,
+      "numero": 36,
+      "codigo": 0,
+      "eof": true,
+      "operacoes": null,
+      "nome": "EOF no indice",
+      "problemas": []
+    },
+    {
+      "ok": true,
+      "timeout": false,
+      "ms": 85,
+      "numero": 37,
+      "codigo": 0,
+      "eof": false,
+      "operacoes": 217,
+      "nome": "sessao longa com 217 opcoes de menu",
+      "problemas": []
+    }
+  ],
+  "conformidade": {
+    "ms": 2652,
+    "saida": "\nrunning 4 tests\ntest conferencia::assinaturas_exatas_do_enunciado ... ok\ntest conferencia::campos_e_tipos_exatos ... ok\ntest conferencia::construtores_e_permissoes ... ok\ntest conferencia::vetores_inicialmente_vazios_e_operacoes ... ok\n\ntest result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n",
+    "timeout": false,
+    "codigo": 0,
+    "erro": ""
+  }
+}
