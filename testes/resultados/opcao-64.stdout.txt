@@ -1,9 +1,0 @@
-
-MENU PRINCIPAL
-1 - Arquivos
-2 - Diretórios
-3 - Usuários
-4 - Grupos
-5 - Permissão avulsa
-0 - Sair
-Opção:

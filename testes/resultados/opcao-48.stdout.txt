@@ -1,9 +1,0 @@
-Nenhum usuário cadastrado.
-
-USUÁRIOS
-1 - Criar
-2 - Editar
-3 - Apagar
-4 - Listar
-0 - Voltar
-Opção:
