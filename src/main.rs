@@ -1,4 +1,4 @@
-// Dupla: [NOME 1] e [NOME 2]
+// Dupla: Yago Landin e Gean Karlo
 use std::io;
 
 // Guarda as três ações permitidas para uma pessoa.

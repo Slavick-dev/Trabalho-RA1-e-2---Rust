@@ -3,7 +3,7 @@
 Menu interativo de Programação Imperativa, com foco em ownership e borrowing.
 Toda a implementação fica em [src/main.rs](src/main.rs), usando apenas a biblioteca padrão.
 
-Antes de entregar, substitua `[NOME 1]` e `[NOME 2]` na primeira linha do código pelos nomes da dupla.
+Dupla: **Yago Landin e Gean Karlo**, identificada na primeira linha do código.
 
 ## Compilar e executar
 
@@ -128,3 +128,5 @@ Nomes vazios são recusados. Fim de entrada encerra o programa, sem ficar repeti
 ## Revisão e testes detalhados
 
 Consulte [REVISAO.md](REVISAO.md) para os problemas encontrados, as correções aplicadas, os resultados e as entradas exatas do roteiro manual.
+
+A [validação final](VALIDACAO_FINAL.md) contém a sessão completa como usuário, a repetição com erros intencionais e a tabela de conformidade de todos os requisitos. As transcrições integrais estão em [sessão normal](SESSAO_NORMAL.txt) e [sessão com erros](SESSAO_ERROS.txt).

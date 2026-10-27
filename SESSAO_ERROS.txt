@@ -1,0 +1,1235 @@
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 1. Entradas inválidas no principal ===
+[DIGITADO] abc
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] <Enter vazio>
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] <3 espaços>
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] @
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] -1
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] 1.5
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] 70000
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] 9
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+
+=== 2. Criar usuário após erros de menu, nome e uid ===
+[DIGITADO] 3
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] abc
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+[DIGITADO] 5
+Opção inválida. Digite um número de 0 a 4.
+Opção:
+[DIGITADO] 2
+Nenhum usuário cadastrado.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 1
+Nome do usuário:
+[DIGITADO] <Enter vazio>
+Nome inválido. Digite um nome não vazio.
+Nome do usuário:
+[DIGITADO] <3 espaços>
+Nome inválido. Digite um nome não vazio.
+Nome do usuário:
+[DIGITADO] Ana
+Uid:
+[DIGITADO] abc
+Número inválido. Digite de 0 a 65535.
+Uid:
+[DIGITADO] -1
+Número inválido. Digite de 0 a 65535.
+Uid:
+[DIGITADO] 70000
+Número inválido. Digite de 0 a 65535.
+Uid:
+[DIGITADO] 1000
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 3. Criar grupo após nome e gid inválidos ===
+[DIGITADO] 4
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Nenhum grupo cadastrado.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 1
+Nome do grupo:
+[DIGITADO] <Enter vazio>
+Nome inválido. Digite um nome não vazio.
+Nome do grupo:
+[DIGITADO] alunos
+Gid:
+[DIGITADO] 70000
+Número inválido. Digite de 0 a 65535.
+Gid:
+[DIGITADO] 1000
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 4. Criar diretório após permissão inválida ===
+[DIGITADO] 2
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 1
+Nome do diretório:
+[DIGITADO] docs
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 8
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] abc
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] <Enter vazio>
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] -1
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 70000
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 7
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 5
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 5
+Uid do dono:
+[DIGITADO] 1000
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 5. Criar arquivo após tamanho inválido e rejeitar duplicado ===
+[DIGITADO] 1
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 1
+Nome do arquivo:
+[DIGITADO] teste
+Tamanho em bytes:
+[DIGITADO] abc
+Tamanho inválido. Digite um inteiro de 0 a 18446744073709551615.
+Tamanho em bytes:
+[DIGITADO] <Enter vazio>
+Tamanho inválido. Digite um inteiro de 0 a 18446744073709551615.
+Tamanho em bytes:
+[DIGITADO] -1
+Tamanho inválido. Digite um inteiro de 0 a 18446744073709551615.
+Tamanho em bytes:
+[DIGITADO] 1.5
+Tamanho inválido. Digite um inteiro de 0 a 18446744073709551615.
+Tamanho em bytes:
+[DIGITADO] 18446744073709551616
+Tamanho inválido. Digite um inteiro de 0 a 18446744073709551615.
+Tamanho em bytes:
+[DIGITADO] 0
+Uid do dono:
+[DIGITADO] 1000
+Gid do grupo:
+[DIGITADO] 1000
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 1
+Nome do arquivo:
+[DIGITADO] teste
+Já existe um arquivo com esse nome nesta lista.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 6. Índices inválidos e gid repetido no usuário ===
+[DIGITADO] 3
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 999
+Item inválido. Escolha um número de 1 a 1.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] abc
+Item inválido. Escolha um número de 1 a 1.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 0
+Item inválido. Escolha um número de 1 a 1.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Gid a adicionar:
+[DIGITADO] 1000
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Gid a adicionar:
+[DIGITADO] 1000
+Grupo já cadastrado neste usuário.
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 4
+
+Item 1 - Usuário: Ana | Uid: 1000
+Gid: 1000
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 7. Membro repetido no grupo ===
+[DIGITADO] 4
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Grupo: alunos | Gid: 1000
+Sem membros.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Uid a adicionar:
+[DIGITADO] 1000
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Uid a adicionar:
+[DIGITADO] 1000
+Membro já cadastrado neste grupo.
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 4
+
+Item 1 - Grupo: alunos | Gid: 1000
+Uid: 1000
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 8. Mover após índice inválido e listar stat ===
+[DIGITADO] 2
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Diretório: docs
+Uid: 1000
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 4
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 999
+Item inválido. Escolha um número de 1 a 1.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 4
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Arquivo movido para o diretório.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 7
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+=== 9. Alterar permissão após erros e listar stat ===
+[DIGITADO] 6
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 999
+Item inválido. Escolha um número de 1 a 1.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 6
+
+Item 1
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar arquivo: teste
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+[DIGITADO] 9
+Opção inválida. Digite um número de 0 a 5.
+Opção:
+[DIGITADO] 3
+Dono:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 8
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] abc
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] <Enter vazio>
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 70000
+Permissão inválida. Digite um número de 0 a 7.
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 7
+Grupo:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 5
+Outros:
+Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):
+[DIGITADO] 0
+
+Editar arquivo: teste
+1 - Nome
+2 - Tamanho
+3 - Permissões
+4 - Uid
+5 - Gid
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 7
+Arquivo: teste
+Tamanho: 0 bytes
+Permissoes: (750 / rwxr-x---)
+Uid: 1000
+Gid: 1000
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+
+=== 10. Remover arquivo ausente, depois remover o correto ===
+[DIGITADO] 5
+Nome do arquivo a apagar:
+[DIGITADO] ausente
+Arquivo não encontrado.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 5
+Nome do arquivo a apagar:
+[DIGITADO] teste
+Arquivo apagado do diretório.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 7
+Diretório vazio.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 5
+Diretório vazio.
+
+Editar diretório: docs
+1 - Nome
+2 - Permissões
+3 - Uid
+4 - Mover arquivo para cá
+5 - Apagar arquivo pelo nome
+6 - Editar arquivo
+7 - Listar conteúdo
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 11. Remover gid ausente, depois correto ===
+[DIGITADO] 3
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Usuário: Ana | Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Gid a remover:
+[DIGITADO] 999
+Grupo não encontrado neste usuário.
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Gid a remover:
+[DIGITADO] 1000
+Grupo removido do usuário.
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 5
+Sem grupos.
+
+Editar usuário: Ana
+1 - Nome
+2 - Uid
+3 - Adicionar grupo
+4 - Remover grupo
+5 - Listar grupos
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 12. Remover membro ausente, depois correto ===
+[DIGITADO] 4
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 2
+
+Item 1 - Grupo: alunos | Gid: 1000
+Uid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Uid a remover:
+[DIGITADO] 999
+Membro não encontrado neste grupo.
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Uid a remover:
+[DIGITADO] 1000
+Membro removido do grupo.
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 5
+Sem membros.
+
+Editar grupo: alunos
+1 - Nome
+2 - Gid
+3 - Adicionar membro
+4 - Remover membro
+5 - Listar membros
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 13. Apagar usuário após índice inválido e tentar apagar vazio ===
+[DIGITADO] 3
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 999
+Item inválido. Escolha um número de 1 a 1.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1 - Usuário: Ana | Uid: 1000
+Sem grupos.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Usuário apagado.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Nenhum usuário cadastrado.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Nenhum usuário cadastrado.
+
+USUÁRIOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 14. Apagar grupo após índice inválido ===
+[DIGITADO] 4
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1 - Grupo: alunos | Gid: 1000
+Sem membros.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] abc
+Item inválido. Escolha um número de 1 a 1.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1 - Grupo: alunos | Gid: 1000
+Sem membros.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Grupo apagado.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Nenhum grupo cadastrado.
+
+GRUPOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 15. Apagar diretório após índice inválido ===
+[DIGITADO] 2
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1 - Diretório: docs
+Uid: 1000
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 0
+Item inválido. Escolha um número de 1 a 1.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1 - Diretório: docs
+Uid: 1000
+Permissoes: (755 / rwxr-xr-x)
+Diretório vazio.
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Diretório e seus arquivos apagados.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Nenhum diretório cadastrado.
+
+DIRETÓRIOS
+1 - Criar
+2 - Editar
+3 - Apagar diretório e seus arquivos
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+
+=== 16. Apagar arquivo pelo menu após erro e sair normalmente ===
+[DIGITADO] 1
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+Nenhum arquivo cadastrado.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 1
+Nome do arquivo:
+[DIGITADO] temporario
+Tamanho em bytes:
+[DIGITADO] 0
+Uid do dono:
+[DIGITADO] 1000
+Gid do grupo:
+[DIGITADO] 1000
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1
+Arquivo: temporario
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 999
+Item inválido. Escolha um número de 1 a 1.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 3
+
+Item 1
+Arquivo: temporario
+Tamanho: 0 bytes
+Permissoes: (664 / rw-rw-r--)
+Uid: 1000
+Gid: 1000
+Escolha um item de 1 a 1.
+Número do item:
+[DIGITADO] 1
+Arquivo apagado.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 4
+Nenhum arquivo cadastrado.
+
+ARQUIVOS
+1 - Criar
+2 - Editar
+3 - Apagar
+4 - Listar
+0 - Voltar
+Opção:
+[DIGITADO] 0
+
+MENU PRINCIPAL
+1 - Arquivos
+2 - Diretórios
+3 - Usuários
+4 - Grupos
+5 - Permissão avulsa
+0 - Sair
+Opção:
+[DIGITADO] 0
+Programa encerrado.
