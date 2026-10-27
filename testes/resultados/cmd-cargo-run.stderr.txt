@@ -1,2 +1,2 @@
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s
      Running `target\debug\trabalho_ra1_ra2.exe`

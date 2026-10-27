@@ -1,2 +1,2 @@
     Checking trabalho_ra1_ra2 v0.1.0 (C:\Users\yagok\Documents\ChatGPT\PUC\Trabalho-RA1-e-2---Rust)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.73s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.91s

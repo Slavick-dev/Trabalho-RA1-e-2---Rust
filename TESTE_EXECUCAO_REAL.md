@@ -12,7 +12,7 @@ stdout (bloco vazio significa zero bytes):
 stderr, incluindo mensagens normais do Cargo:
 ```text
    Compiling trabalho_ra1_ra2 v0.1.0 (C:\Users\yagok\Documents\ChatGPT\PUC\Trabalho-RA1-e-2---Rust)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.38s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.40s
 ```
 Código de saída: 0
 
@@ -24,7 +24,7 @@ stdout (bloco vazio significa zero bytes):
 stderr, incluindo mensagens normais do Cargo:
 ```text
     Checking trabalho_ra1_ra2 v0.1.0 (C:\Users\yagok\Documents\ChatGPT\PUC\Trabalho-RA1-e-2---Rust)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.73s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.91s
 ```
 Código de saída: 0
 
@@ -1965,9 +1965,9 @@ Saída integral da execução desses quatro testes:
 
 running 4 tests
 test conferencia::assinaturas_exatas_do_enunciado ... ok
+test conferencia::vetores_inicialmente_vazios_e_operacoes ... ok
 test conferencia::campos_e_tipos_exatos ... ok
 test conferencia::construtores_e_permissoes ... ok
-test conferencia::vetores_inicialmente_vazios_e_operacoes ... ok
 
 test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
