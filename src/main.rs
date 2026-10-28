@@ -1,14 +1,15 @@
 // Dupla: Yago Landin e Gean Karlo
 use std::io;
 
-// Guarda as três ações permitidas para uma pessoa.
+// ===== PERMISSAO =====
+// Um bool para cada ação: assim dá para combinar as três.
 struct Permissao {
     leitura: bool,
     escrita: bool,
     execucao: bool,
 }
 
-// Cria permissões e calcula sua representação octal.
+// Deixo a criação e a conta da permissão junto do tipo.
 impl Permissao {
     fn new(leitura: bool, escrita: bool, execucao: bool) -> Permissao {
         Permissao {
@@ -18,23 +19,20 @@ impl Permissao {
         }
     }
 
-    // Usa &self porque apenas consulta os valores, sem alterar a permissão.
+    // &self basta porque a conta só lê os campos.
+    // Cada ação tem um peso: r=4, w=2 e x=1, igual ao chmod.
+    // MEXER: pesos do dígito de permissão
     fn octal(&self) -> u8 {
-        let mut valor = 0;
-        if self.leitura {
-            valor += 4;
-        }
-        if self.escrita {
-            valor += 2;
-        }
-        if self.execucao {
-            valor += 1;
-        }
-        valor
+        let leitura = if self.leitura { 4 } else { 0 };
+        let escrita = if self.escrita { 2 } else { 0 };
+        let execucao = if self.execucao { 1 } else { 0 };
+        leitura + escrita + execucao
     }
 }
 
-// Representa um arquivo e suas permissões de dono, grupo e outros.
+// ===== ARQUIVO =====
+// A tupla segue a ordem dono, grupo e outros.
+// MEXER: campos do arquivo; conferir também new e stat
 struct Arquivo {
     nome: String,
     tamanho: u64,
@@ -43,9 +41,10 @@ struct Arquivo {
     gid_grupo: u16,
 }
 
-// Cria arquivos, troca permissões e mostra seus dados.
+// O arquivo nasce com permissões padrão, mas pode trocar depois.
 impl Arquivo {
-    // Recebe nome por valor: o arquivo passa a ser dono da String.
+    // O nome vem por valor porque a String vai pertencer ao arquivo.
+    // MEXER: aqui ficam as permissões padrão
     fn new(nome: String, tamanho: u64, uid: u16, gid: u16) -> Arquivo {
         Arquivo {
             nome,
@@ -60,12 +59,13 @@ impl Arquivo {
         }
     }
 
-    // &mut self permite alterar o arquivo; a tupla recebida passa a pertencer a ele.
+    // &mut self deixa trocar a tupla, que passa a pertencer ao arquivo.
     fn alterar_permissao(&mut self, permissoes: (Permissao, Permissao, Permissao)) {
         self.permissoes = permissoes;
     }
 
-    // Usa &self para imprimir sem modificar nem consumir o arquivo.
+    // &self deixa mostrar os dados sem alterar nem perder o arquivo.
+    // MEXER: formato do stat
     fn stat(&self) {
         println!("Arquivo: {}", self.nome);
         println!("Tamanho: {} bytes", self.tamanho);
@@ -75,7 +75,8 @@ impl Arquivo {
     }
 }
 
-// Guarda arquivos que pertencem a um diretório.
+// ===== DIRETORIO =====
+// O vetor guarda os próprios arquivos, não referências a eles.
 struct Diretorio {
     nome: String,
     arquivos: Vec<Arquivo>,
@@ -83,9 +84,9 @@ struct Diretorio {
     uid_dono: u16,
 }
 
-// Gerencia os arquivos de um diretório.
+// O diretório começa vazio; os arquivos entram depois.
 impl Diretorio {
-    // Nome e permissões são movidos para o diretório, que passa a ser dono deles.
+    // Nome e permissões vêm por valor porque vão pertencer ao diretório.
     fn new(
         nome: String,
         permissoes: (Permissao, Permissao, Permissao),
@@ -99,12 +100,15 @@ impl Diretorio {
         }
     }
 
-    // &mut self altera o vetor; recebe Arquivo por valor porque o diretório será seu dono.
+    // &mut self muda o vetor; Arquivo vem por valor para o diretório ficar dono dele.
+    // MEXER: entrada do arquivo por move
     fn adiciona_arquivo(&mut self, arquivo: Arquivo) {
         self.arquivos.push(arquivo);
     }
 
-    // &mut self altera o vetor; &str consulta o nome sem tomar posse da String.
+    // &mut self deixa remover; &str empresta só o nome para comparar.
+    // Paro no primeiro nome encontrado, antes de usar outro índice.
+    // MEXER: retorno das remoções; ver também remove_grupo e remove_membro
     fn remove_arquivo(&mut self, nome_arquivo: &str) {
         for indice in 0..self.arquivos.len() {
             if self.arquivos[indice].nome == nome_arquivo {
@@ -116,7 +120,7 @@ impl Diretorio {
         println!("Arquivo não encontrado.");
     }
 
-    // &self e &self.arquivos permitem listar sem mover os arquivos para o laço.
+    // &self e o & no vetor deixam listar sem tirar os arquivos do diretório.
     fn listar_conteudo(&self) {
         if self.arquivos.is_empty() {
             println!("Diretório vazio.");
@@ -127,16 +131,17 @@ impl Diretorio {
     }
 }
 
-// Guarda a identificação do usuário e os IDs de seus grupos.
+// ===== USUARIO =====
+// Aqui ficam só os gids; os grupos completos ficam em outra lista.
 struct Usuario {
     nome: String,
     uid: u16,
     grupos_ids: Vec<u16>,
 }
 
-// Cria usuários e gerencia seus IDs de grupos.
+// Os gids do usuário são alterados aqui, sem mexer no vetor de grupos.
 impl Usuario {
-    // Move a String nome para o novo usuário.
+    // A String vem por valor para o usuário guardar o próprio nome.
     fn new(nome: String, uid: u16) -> Usuario {
         Usuario {
             nome,
@@ -145,7 +150,8 @@ impl Usuario {
         }
     }
 
-    // &mut self permite mudar o vetor; u16 é copiado ao entrar no método.
+    // &mut self permite incluir; o gid é u16 e entra como cópia.
+    // O contains evita repetir o mesmo gid neste usuário.
     fn adiciona_grupo(&mut self, gid: u16) {
         if self.grupos_ids.contains(&gid) {
             println!("Grupo já cadastrado neste usuário.");
@@ -154,19 +160,17 @@ impl Usuario {
         }
     }
 
-    // &mut self permite remover um elemento do vetor.
+    // &mut self é necessário para remover; position procura a primeira ocorrência do gid.
     fn remove_grupo(&mut self, gid: u16) {
-        for indice in 0..self.grupos_ids.len() {
-            if self.grupos_ids[indice] == gid {
-                self.grupos_ids.remove(indice);
-                println!("Grupo removido do usuário.");
-                return;
-            }
+        if let Some(indice) = self.grupos_ids.iter().position(|&grupo| grupo == gid) {
+            self.grupos_ids.remove(indice);
+            println!("Grupo removido do usuário.");
+        } else {
+            println!("Grupo não encontrado neste usuário.");
         }
-        println!("Grupo não encontrado neste usuário.");
     }
 
-    // &self consulta os grupos; o laço empresta o vetor sem consumi-lo.
+    // &self só consulta; o for pega os gids emprestados e mantém o vetor.
     fn listar_grupos(&self) {
         if self.grupos_ids.is_empty() {
             println!("Sem grupos.");
@@ -177,16 +181,17 @@ impl Usuario {
     }
 }
 
-// Guarda a identificação do grupo e os IDs de seus membros.
+// ===== GRUPO =====
+// Guardo os uids dos membros, sem mover os usuários para cá.
 struct Grupo {
     nome: String,
     gid: u16,
     membros_uids: Vec<u16>,
 }
 
-// Cria grupos e gerencia seus IDs de membros.
+// Mudar estes membros não atualiza os gids dos usuários automaticamente.
 impl Grupo {
-    // Move a String nome para o novo grupo.
+    // O grupo fica com a String recebida por valor; o gid é copiado.
     fn new(nome: String, gid: u16) -> Grupo {
         Grupo {
             nome,
@@ -195,7 +200,7 @@ impl Grupo {
         }
     }
 
-    // &mut self permite mudar o vetor; u16 é copiado ao entrar no método.
+    // &mut self deixa incluir o uid copiado, depois de conferir se já existe.
     fn adiciona_membro(&mut self, uid: u16) {
         if self.membros_uids.contains(&uid) {
             println!("Membro já cadastrado neste grupo.");
@@ -204,19 +209,17 @@ impl Grupo {
         }
     }
 
-    // &mut self permite remover um elemento do vetor.
+    // &mut self deixa remover; position devolve None quando não acha o uid.
     fn remove_membro(&mut self, uid: u16) {
-        for indice in 0..self.membros_uids.len() {
-            if self.membros_uids[indice] == uid {
-                self.membros_uids.remove(indice);
-                println!("Membro removido do grupo.");
-                return;
-            }
+        if let Some(indice) = self.membros_uids.iter().position(|&membro| membro == uid) {
+            self.membros_uids.remove(indice);
+            println!("Membro removido do grupo.");
+        } else {
+            println!("Membro não encontrado neste grupo.");
         }
-        println!("Membro não encontrado neste grupo.");
     }
 
-    // &self consulta os membros; o laço empresta o vetor sem consumi-lo.
+    // &self basta para ler; o for não tira os membros do vetor.
     fn listar_membros(&self) {
         if self.membros_uids.is_empty() {
             println!("Sem membros.");
@@ -227,7 +230,10 @@ impl Grupo {
     }
 }
 
-// Lê uma linha, permitindo que cada função valide seu próprio contexto.
+// ===== LEITURA DE ENTRADA (funções ler_*) =====
+// Centralizo a leitura para todos os pedidos tratarem EOF do mesmo jeito.
+// &str empresta o texto do pedido; a String devolvida pertence a quem chamou.
+// Ok(0) é fim da entrada, então saio em vez de repetir a pergunta para sempre.
 fn ler_entrada(mensagem: &str) -> String {
     println!("{}", mensagem);
     let mut entrada = String::new();
@@ -244,7 +250,8 @@ fn ler_entrada(mensagem: &str) -> String {
     }
 }
 
-// Lê nomes não vazios, retirando espaços das extremidades.
+// Enter e espaços sozinhos não servem como nome; ler_entrada já usa trim.
+// MEXER: validação e tamanho máximo dos nomes
 fn ler_texto(mensagem: &str) -> String {
     loop {
         let texto = ler_entrada(mensagem);
@@ -255,7 +262,8 @@ fn ler_texto(mensagem: &str) -> String {
     }
 }
 
-// Lê números de 0 a 65535, repetindo a pergunta quando há erro.
+// O parse barra negativos e valores fora de u16, sem dar panic.
+// MEXER: limite do uid/gid; esta leitura é usada para os dois
 fn ler_u16(mensagem: &str) -> u16 {
     loop {
         match ler_entrada(mensagem).parse::<u16>() {
@@ -265,7 +273,7 @@ fn ler_u16(mensagem: &str) -> u16 {
     }
 }
 
-// Lê um tamanho sem sinal, respeitando o limite do tipo u64.
+// Tamanho não pode ser negativo; se não couber em u64, pergunto de novo.
 fn ler_u64(mensagem: &str) -> u64 {
     loop {
         match ler_entrada(mensagem).parse::<u64>() {
@@ -275,7 +283,7 @@ fn ler_u64(mensagem: &str) -> u64 {
     }
 }
 
-// Lê apenas opções existentes no menu que está sendo exibido.
+// Cada menu passa seu maior número para não aceitar uma opção que não existe.
 fn ler_opcao(maximo: u16) -> u16 {
     loop {
         match ler_entrada("Opção:").parse::<u16>() {
@@ -285,7 +293,8 @@ fn ler_opcao(maximo: u16) -> u16 {
     }
 }
 
-// Seleciona uma posição exibida no menu e verifica os limites antes do acesso.
+// A tela começa em 1, mas o vetor começa em 0.
+// Só devolvo um índice depois de checar os limites; lista vazia devolve None.
 fn ler_indice(quantidade: usize) -> Option<usize> {
     if quantidade == 0 {
         return None;
@@ -300,7 +309,7 @@ fn ler_indice(quantidade: usize) -> Option<usize> {
     }
 }
 
-// Lê uma permissão como dígito octal e converte para três booleanos.
+// Só aceito 0 a 7: os bits 4, 2 e 1 dizem quais ações ficam ligadas.
 fn ler_permissao() -> Permissao {
     loop {
         let entrada = ler_entrada("Permissão de 0 a 7 (leitura=4, escrita=2, execução=1):");
@@ -313,7 +322,7 @@ fn ler_permissao() -> Permissao {
     }
 }
 
-// Lê as permissões na ordem dono, grupo e outros.
+// Mantenho a ordem da tupla para não trocar dono, grupo e outros.
 fn ler_permissoes() -> (Permissao, Permissao, Permissao) {
     println!("Dono:");
     let dono = ler_permissao();
@@ -324,7 +333,8 @@ fn ler_permissoes() -> (Permissao, Permissao, Permissao) {
     (dono, grupo, outros)
 }
 
-// Converte uma permissão emprestada para o texto rwx, usando hífens nas ausências.
+// ===== FUNÇÕES AUXILIARES (permissões, nomes repetidos) =====
+// Empresto a permissão porque só preciso ler; cada ação desligada vira um hífen.
 fn texto_permissao(permissao: &Permissao) -> String {
     let mut texto = String::new();
     texto.push(if permissao.leitura { 'r' } else { '-' });
@@ -333,7 +343,8 @@ fn texto_permissao(permissao: &Permissao) -> String {
     texto
 }
 
-// Imprime a tupla emprestada no formato octal e simbólico solicitado.
+// Empresto a tupla para mostrar os três dígitos sem consumir as permissões.
+// MEXER: exibição do octal completo e do texto rwx
 fn mostrar_permissoes(permissoes: &(Permissao, Permissao, Permissao)) {
     println!(
         "Permissoes: ({}{}{} / {}{}{})",
@@ -346,47 +357,43 @@ fn mostrar_permissoes(permissoes: &(Permissao, Permissao, Permissao)) {
     );
 }
 
-// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+// Empresto a lista; any para no primeiro outro arquivo com esse nome.
+// None compara todos; Some(indice) pula o próprio item ao renomear.
+// MEXER: regra de nomes repetidos nas listas e dentro do diretório
 fn nome_arquivo_repetido(arquivos: &[Arquivo], nome: &str, ignorar: Option<usize>) -> bool {
-    for (indice, arquivo) in arquivos.iter().enumerate() {
-        if Some(indice) != ignorar && arquivo.nome == nome {
-            return true;
-        }
-    }
-    false
+    arquivos
+        .iter()
+        .enumerate()
+        .any(|(indice, arquivo)| Some(indice) != ignorar && arquivo.nome == nome)
 }
 
-// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+// Mesma checagem de nomes, agora na lista emprestada de diretórios.
 fn nome_diretorio_repetido(diretorios: &[Diretorio], nome: &str, ignorar: Option<usize>) -> bool {
-    for (indice, diretorio) in diretorios.iter().enumerate() {
-        if Some(indice) != ignorar && diretorio.nome == nome {
-            return true;
-        }
-    }
-    false
+    diretorios
+        .iter()
+        .enumerate()
+        .any(|(indice, diretorio)| Some(indice) != ignorar && diretorio.nome == nome)
 }
 
-// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+// Para usuários, também pulo o próprio item ao renomear.
 fn nome_usuario_repetido(usuarios: &[Usuario], nome: &str, ignorar: Option<usize>) -> bool {
-    for (indice, usuario) in usuarios.iter().enumerate() {
-        if Some(indice) != ignorar && usuario.nome == nome {
-            return true;
-        }
-    }
-    false
+    usuarios
+        .iter()
+        .enumerate()
+        .any(|(indice, usuario)| Some(indice) != ignorar && usuario.nome == nome)
 }
 
-// Verifica nomes repetidos na mesma lista, ignorando o item que está sendo editado.
+// Nos grupos, a busca só consulta a lista emprestada.
 fn nome_grupo_repetido(grupos: &[Grupo], nome: &str, ignorar: Option<usize>) -> bool {
-    for (indice, grupo) in grupos.iter().enumerate() {
-        if Some(indice) != ignorar && grupo.nome == nome {
-            return true;
-        }
-    }
-    false
+    grupos
+        .iter()
+        .enumerate()
+        .any(|(indice, grupo)| Some(indice) != ignorar && grupo.nome == nome)
 }
 
-// Recusa nomes repetidos e cria um arquivo com as permissões padrão do construtor.
+// ===== MENUS =====
+// A lista é emprestada só para conferir o nome.
+// Devolvo o arquivo por valor para quem chamou poder guardá-lo no vetor.
 fn criar_arquivo(arquivos: &[Arquivo]) -> Option<Arquivo> {
     let nome = ler_texto("Nome do arquivo:");
     if nome_arquivo_repetido(arquivos, &nome, None) {
@@ -399,7 +406,9 @@ fn criar_arquivo(arquivos: &[Arquivo]) -> Option<Arquivo> {
     Some(Arquivo::new(nome, tamanho, uid, gid))
 }
 
-// Edita um arquivo já selecionado, mantendo nomes distintos na mesma lista.
+// &mut deixa editar o arquivo escolhido sem tomar a lista inteira.
+// O índice já foi conferido por ler_indice antes de chegar aqui.
+// MEXER: opções da edição de arquivo; manter texto e match juntos
 fn editar_arquivo(arquivos: &mut [Arquivo], indice: usize) {
     loop {
         println!("\nEditar arquivo: {}", arquivos[indice].nome);
@@ -423,7 +432,8 @@ fn editar_arquivo(arquivos: &mut [Arquivo], indice: usize) {
     }
 }
 
-// Mostra os arquivos e sua numeração sem consumir o vetor.
+// A lista é emprestada para mostrar os arquivos sem tirá-los dela.
+// MEXER: ordem de listagem dos arquivos
 fn listar_arquivos(arquivos: &[Arquivo]) {
     if arquivos.is_empty() {
         println!("Nenhum arquivo cadastrado.");
@@ -434,7 +444,8 @@ fn listar_arquivos(arquivos: &[Arquivo]) {
     }
 }
 
-// Gerencia os arquivos que ainda não foram movidos para um diretório.
+// Preciso de &mut Vec porque criar e apagar mudam o tamanho da lista.
+// Aqui ficam os arquivos que ainda não foram movidos para um diretório.
 fn menu_arquivos(arquivos: &mut Vec<Arquivo>) {
     loop {
         println!("\nARQUIVOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
@@ -464,7 +475,7 @@ fn menu_arquivos(arquivos: &mut Vec<Arquivo>) {
     }
 }
 
-// Lista os dados e o conteúdo de todos os diretórios.
+// Só empresto os diretórios para mostrar seus dados e os arquivos de cada um.
 fn listar_diretorios(diretorios: &[Diretorio]) {
     if diretorios.is_empty() {
         println!("Nenhum diretório cadastrado.");
@@ -477,7 +488,8 @@ fn listar_diretorios(diretorios: &[Diretorio]) {
     }
 }
 
-// Edita o diretório selecionado e gerencia os arquivos que ele possui.
+// As duas listas são mutáveis porque mover tira o arquivo de uma e põe na outra.
+// O diretório fica dono do arquivo; não crio uma segunda cópia.
 fn editar_diretorio(diretorios: &mut [Diretorio], indice: usize, arquivos: &mut Vec<Arquivo>) {
     loop {
         println!("\nEditar diretório: {}", diretorios[indice].nome);
@@ -533,7 +545,7 @@ fn editar_diretorio(diretorios: &mut [Diretorio], indice: usize, arquivos: &mut 
     }
 }
 
-// Cria, edita, apaga e lista diretórios usando o vetor mantido no main.
+// &mut deixa criar ou apagar diretórios e mover arquivos para dentro deles.
 fn menu_diretorios(diretorios: &mut Vec<Diretorio>, arquivos: &mut Vec<Arquivo>) {
     loop {
         println!("\nDIRETÓRIOS\n1 - Criar\n2 - Editar\n3 - Apagar diretório e seus arquivos\n4 - Listar\n0 - Voltar");
@@ -568,7 +580,7 @@ fn menu_diretorios(diretorios: &mut Vec<Diretorio>, arquivos: &mut Vec<Arquivo>)
     }
 }
 
-// Mostra os usuários e seus IDs de grupos com empréstimos imutáveis.
+// Empresto os usuários para listar; os dados continuam na lista do main.
 fn listar_usuarios(usuarios: &[Usuario]) {
     if usuarios.is_empty() {
         println!("Nenhum usuário cadastrado.");
@@ -584,7 +596,7 @@ fn listar_usuarios(usuarios: &[Usuario]) {
     }
 }
 
-// Edita o usuário selecionado e adiciona ou remove IDs de grupos.
+// &mut deixa mudar os dados do usuário selecionado, sem mover o usuário.
 fn editar_usuario(usuarios: &mut [Usuario], indice: usize) {
     loop {
         println!("\nEditar usuário: {}", usuarios[indice].nome);
@@ -608,7 +620,7 @@ fn editar_usuario(usuarios: &mut [Usuario], indice: usize) {
     }
 }
 
-// Cria, edita, apaga e lista usuários.
+// Uso &mut Vec porque as opções podem incluir ou remover usuários.
 fn menu_usuarios(usuarios: &mut Vec<Usuario>) {
     loop {
         println!("\nUSUÁRIOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
@@ -642,7 +654,7 @@ fn menu_usuarios(usuarios: &mut Vec<Usuario>) {
     }
 }
 
-// Mostra os grupos e seus IDs de membros com empréstimos imutáveis.
+// Empresto a lista para consultar os grupos e os uids que eles guardam.
 fn listar_grupos(grupos: &[Grupo]) {
     if grupos.is_empty() {
         println!("Nenhum grupo cadastrado.");
@@ -658,7 +670,7 @@ fn listar_grupos(grupos: &[Grupo]) {
     }
 }
 
-// Edita o grupo selecionado e adiciona ou remove IDs de membros.
+// &mut permite mudar o grupo escolhido e seu vetor de membros.
 fn editar_grupo(grupos: &mut [Grupo], indice: usize) {
     loop {
         println!("\nEditar grupo: {}", grupos[indice].nome);
@@ -682,7 +694,7 @@ fn editar_grupo(grupos: &mut [Grupo], indice: usize) {
     }
 }
 
-// Cria, edita, apaga e lista grupos.
+// A lista vem com &mut porque criar e apagar mudam o vetor do main.
 fn menu_grupos(grupos: &mut Vec<Grupo>) {
     loop {
         println!("\nGRUPOS\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
@@ -716,7 +728,8 @@ fn menu_grupos(grupos: &mut Vec<Grupo>) {
     }
 }
 
-// Mantém uma permissão avulsa para praticar criação, edição, exclusão e consulta.
+// None quer dizer que ainda não há permissão avulsa; Some guarda uma.
+// Uso &mut para criar, trocar ou apagar esse valor no main.
 fn menu_permissao(permissao: &mut Option<Permissao>) {
     loop {
         println!("\nPERMISSÃO AVULSA\n1 - Criar\n2 - Editar\n3 - Apagar\n4 - Listar\n0 - Voltar");
@@ -756,7 +769,9 @@ fn menu_permissao(permissao: &mut Option<Permissao>) {
     }
 }
 
-// Mantém os quatro vetores e repete o menu principal até a opção de saída.
+// ===== MAIN =====
+// As listas ficam aqui para os menus usarem os mesmos dados até sair.
+// MEXER: opções do menu principal e chamada de cada submenu
 fn main() {
     let mut arquivos: Vec<Arquivo> = Vec::new();
     let mut diretorios: Vec<Diretorio> = Vec::new();
